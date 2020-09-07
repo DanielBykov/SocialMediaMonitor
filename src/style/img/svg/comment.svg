@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Fill 1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Pulse" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Pulse-components-2" transform="translate(-897.000000, -979.000000)" fill="#AAAAAA">
+            <path d="M909,979.0005 L901,979.0005 C898.791,979.0005 897,980.638735 897,982.659315 L897,984.732949 C897,985.7501 897.454,986.670292 898.187,987.332538 L898.121,987.332538 L903.263,991.0005 L904.038,991.0005 L904.038,988.391765 L909,988.391765 C911.209,988.391765 913,986.75353 913,984.732949 L913,982.659315 C913,980.638735 911.209,979.0005 909,979.0005" id="Fill-1"></path>
+        </g>
+    </g>
+</svg>

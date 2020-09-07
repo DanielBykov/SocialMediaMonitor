@@ -1,0 +1,101 @@
+// todo: Hard code !!!
+$colorBlack: #000
+//$colorGrayDD: #828282
+$colorGrayDD: #aaa
+$colorGrayD: #ababab
+
+$colorGray: #cdcdcd
+
+$colorGrayL: #e1e1e2
+$colorGrayLL: #f9fafb
+$colorWhite: #fff
+
+$gray-800: #000000
+
+@mixin bp768up()
+  @media (min-width: 768px)
+    @content
+
+@mixin bp1024()
+  @media (min-width: 1024px) and (max-width: 1439px)
+    @content
+
+@mixin bp1024up()
+  @media (min-width: 1024px)
+    @content
+
+@mixin bp1440up()
+  @media (min-width: 1440px)
+    @content
+
+.select-company__wrap
+  .sco__control
+    background-color: $colorBlack
+    border-color: $colorGrayDD
+    height: 25px
+    min-height: 25px
+
+    .sco__value-container
+      cursor: text
+      height: 24px
+      padding: 0 8px
+      .sco__single-value
+        color: $colorGrayDD
+        font-size: 13px
+        //line-height: 1.5
+      .sco__input
+        font-size: 13px
+        color: $colorWhite
+        position: relative
+        top: -2px
+
+    &.sco__control--menu-is-open
+      .sco__single-value
+        color: $colorWhite
+
+    &.sco__control--menu-is-open
+      .sco__single-value
+        color: $colorWhite
+
+    &.sco__control--is-focused
+      border-color: $colorWhite
+      box-shadow: none
+      &:hover
+        border-color: $colorWhite
+      .sco__single-value
+        color: $colorWhite
+
+
+    .sco__indicators
+      .sco__indicator-separator
+        background-color: $colorGrayDD // vertical separator
+      .sco__dropdown-indicator
+        color: $colorGrayDD
+        cursor: pointer
+        padding: 0 6px                  // HEIGHT
+
+  // DropDown
+  .sco__menu
+    box-shadow: 0 2px 4px 0 #323232
+    z-index: 20
+    width: calc(100% - 40px)
+
+    .sco__menu-list
+      padding: 0
+      border: 1px solid #ffffff
+      border-radius: 5px
+      margin: -1px
+
+      .sco__option
+        background-color: $colorBlack
+        color: $colorGrayDD
+        cursor: pointer
+        font-size: 13px
+        padding: 7px 12px
+
+        &.sco__option--is-selected //,&.sco__option--is-focused
+          background-color: $colorWhite
+          color: $colorBlack
+        &.sco__option--is-focused
+          background-color: $colorGray
+          color: $colorBlack

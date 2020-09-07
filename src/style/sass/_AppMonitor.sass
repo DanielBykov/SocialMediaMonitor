@@ -1,0 +1,1175 @@
+//$colorHover: $colorBlack
+//$colorChecked: $colorBlack
+//$colorUnChecked: $colorGrayD
+//$colorPressed: $colorGrayDDD
+
+.filters-bar
+  display: flex
+  flex-wrap: wrap
+  background-color: $colorGrayLL
+  //min-height: 50px
+  .radio-filter
+    border-bottom: 1px solid $colorGrayL
+    &::before
+      content: ""
+      display: block
+      height: 40px
+      width: 1px
+      background: #e1e1e2
+      position: absolute
+      top: 5px
+      right: 0
+
+// RadioFilter Component
+.radio-filter
+  display: flex
+  padding: 0 30px
+  position: relative
+  .filter-group
+    display: flex
+    align-content: center
+    align-items: center
+    .filter-item
+      font-family: $fontSofiaSemi
+      font-size: 18px
+      color: $colorUnChecked
+      cursor: pointer
+      padding: 0 7.5px
+      //&:first-child, &:last-child
+        //padding: 0
+
+      &:hover
+        color: $colorHover
+
+      .ico
+        width: 24px
+
+      input
+        display: none
+
+        &:checked + .ico, &:checked + .text
+          color: $colorChecked
+
+        &:active + .ico, &:active + .text
+          position: relative
+          top: -1px
+          color: $colorPressed
+
+
+.search-bar
+  padding: 20px 15px
+  //background-color: #e1f3de
+
+  @include bp768up
+    padding: 32px 80px
+
+  @include bp1024up
+    padding: 32px 120px
+
+  @include bp1440up
+    padding: 40px 200px
+
+  .search-bar-custom
+    .rs__control
+      border-color: #646465
+      //height: 50px
+      min-height: 50px
+      &.rs__control--is-focused
+        box-shadow: none
+      &.rs__control--menu-is-open
+        //border-bottom: none
+        border-bottom-left-radius: 0
+        border-bottom-right-radius: 0
+
+    .loupe-ico
+      width: 20px
+      color: #1d1e1f
+      margin-left: 10px
+      margin-right: 7px
+      &.created-option
+        margin-left: 0px
+
+    .dropdown-sub-menu
+      position: absolute
+      right: 3px
+      top: 1px
+      height: calc(100% - 2px)
+      width: 35px
+      border-left: none
+      background-color: $colorWhite
+      z-index: 10
+      cursor: pointer
+
+      .ico
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100%
+        .hamburger-ico
+          height: 30px
+          color: $color82
+          &.opened
+            color: $colorBlack
+
+      .radio-filter
+        flex-direction: column
+        position: absolute
+        top: 49px
+        background-color: #fff
+        border: 1px solid
+        border-radius: 4px
+        padding: 0 10px
+        width: 100px
+        .box-header
+          font-size: 10px !important
+          margin: 10px 0 !important
+          line-height: 1 !important
+        .filter-group
+          flex-direction: column
+          align-items: start
+          .filter-item
+            font-size: 14px
+            padding: 5px 0
+            display: block
+            width: 100%
+
+    .rs__value-container
+      .rs__placeholder
+        margin-left: 40px
+
+    .rs__input
+      font-size: 24px
+
+    .rs__multi-value
+      background-color: #000000
+      border-radius: 20px
+      .star-ico
+        width: 20px
+        color: $colorGrayD
+        margin-left: 10px
+      .rs__multi-value__label
+        font-family: $fontSofiaReg
+        font-size: 23px
+        line-height: 1.4
+
+        color: #fff
+      .rs__multi-value__remove
+        &:hover
+          background-color: transparent
+          cursor: pointer
+          .close-ico-custom
+            color: $colorWhite
+        .close-ico-custom
+          width: 15px
+          margin-right: 5px
+          color: $colorGrayD
+
+    .rs__menu
+      border-top-right-radius: 0
+      border-top-left-radius: 0
+      border: 1px solid #646465
+      box-shadow: 0px 1px 0 1px hsla(0,0%,0%,0.1), 0 4px 11px hsla(0,0%,0%,0.1)
+      margin: -0.5px 0 0
+
+      .rs__menu-list
+        .rs__group
+          .rs__group-heading
+            letter-spacing: 1.5px
+
+    .rs__option
+      cursor: pointer
+      font-size: 24px
+      &.rs__option--is-focused
+        background-color: #d8d8d8
+      .star-ico
+        width: 18px
+        color: $colorBlack
+        margin-right: 10px
+
+
+.emotions-box-component
+  //background-color: #c6d5e8
+  margin: 0 auto
+  height: 100%
+  //width: 70px
+  display: flex
+  flex-direction: column
+  .emo-title
+    font-weight: bold
+    font-size: 13px
+  .emo-smiles-box
+    flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    .emo-item
+      display: flex
+      justify-content: space-between
+      align-items: center
+      position: relative
+      &:hover
+        .emo-tooltip
+          display: block
+      .emo-ico-wrap
+        display: flex
+        justify-content: center
+      .emo-tooltip
+        font-size: 11px
+        text-transform: capitalize
+        background-color: #000
+        color: #fff
+        padding: 7px 14px
+        border-radius: 5px
+        top: -25px
+        position: absolute
+        display: none
+        &::before
+          content: ""
+          display: block
+          position: absolute
+          border: 5px solid transparent
+          border-top-color: black
+          top: 26px
+          left: 50%
+          transform: translateX(-50%)
+
+      .emo-val
+        font-size: 15px
+        div
+          text-transform: capitalize
+          text-align: center
+  &.row
+    .emo-smiles-box
+      flex-direction: row
+      //.item
+      //  .ico-wrap
+
+.chart-filters-bar
+  display: flex
+  flex-wrap: wrap
+  //background-color: #efe0ff
+  flex-direction: column
+  height: 50px
+  border-top: 1px solid rgb(205, 205, 205)
+  border-bottom: 1px solid rgb(205, 205, 205)
+  width: 100%
+
+  @include bp768up
+    flex-direction: row
+
+  .chart-title
+    font-size: 14px
+    letter-spacing: -0.44px
+    line-height: 17.6px
+    width: 84px
+    padding-top: 5px
+    height: 100%
+    color: $colorBlack
+    font-family: $fontSofiaSemi
+    align-self: flex-start
+
+    @include bp768up
+      font-size: 18px
+      letter-spacing: -0.5px
+      line-height: 17.6px
+      width: 175px
+      height: 20px
+      align-self: center
+      padding-top: 0
+
+  .radio-filter
+    display: flex
+    padding: 0
+    position: relative
+    height: 100%
+
+    @include bp768up
+      padding: 0 30px
+
+    .filter-group
+      display: flex
+      align-content: center
+      align-items: center
+      height: 100%
+      .filter-item
+        font-family: $fontSofiaSemi
+        font-size: 14px
+        letter-spacing: 0px
+        line-height: 14px
+        width: 74px
+        color: $colorUnChecked
+        cursor: pointer
+        //padding: 0 7.5px
+        //&:first-child, &:last-child
+          //padding: 0
+
+        @include bp768up
+          font-size: 16px
+          //height: 48px
+          letter-spacing: -0.44px
+          line-height: 15.36px
+          width: 200px
+
+        &:hover
+          color: $colorHover
+
+        .ico
+          width: 24px
+
+        input
+          display: none
+
+          &:checked + .ico, &:checked + .text
+            color: $colorChecked
+            width: 100%
+            height: 100%
+
+          &:active + .ico, &:active + .text
+            position: relative
+            top: -1px
+            color: $colorPressed
+
+.main-body
+  width: 100%
+  position: relative
+
+  @include bp1024up
+    display: flex
+    position: relative
+
+  section.chart-section-wrap
+    margin: 0 15px
+    //min-width: 744px
+
+    @include bp768up
+      margin: 0 20px
+
+    @include bp1024up
+      flex: 1
+      margin-right: 32px
+      width: 744px
+      margin: 0px 20px
+
+    @include bp1920up
+      margin-right: 50px
+
+    .key-metrics
+      //background-color: #eff5ee
+      margin-bottom: 20px
+
+    .top-content
+      .chart-filters-bar .chart-title
+        font-size: 16px
+        letter-spacing: -0.44px
+        line-height: 17.6px
+        width: 74px
+        padding-top: 16px
+        height: 100%
+        color: #000
+        font-family: SofiaPro-SemiBold
+        align-self: flex-start
+        //background-color: #eef1f5
+
+  section.top-content-wrap
+    //background-color: #f8f3ee
+    padding: 20px
+    @include bp1024up
+      width: 208px
+      margin-right: 20px
+      padding: 0
+
+    @include bp1920up
+      width: 260px
+      margin-right: 30px
+
+    //outline: 1px solid #e1e1e2
+
+    .content-top-bar
+      display: flex
+      flex-wrap: wrap
+      //background-color: #efe0ff
+      //height: 50px
+      border-top: 1px solid rgb(205, 205, 205)
+      border-bottom: 1px solid rgb(205, 205, 205)
+      height: 1px
+      width: 100%
+      //position: relative
+
+    .content-title
+      color: $colorBlack
+      font-family: $fontSofiaSemi
+      font-size: 18px
+      letter-spacing: -0.5px
+      line-height: 50px
+      width: 100%
+      border-bottom: 1px solid rgb(205, 205, 205)
+      //position: relative
+
+    .radio-filter
+      width: 100%
+      padding-left: 0
+      border-bottom: 1px solid rgb(205, 205, 205)
+
+    .top-content-list
+      display: flex
+      //justify-content: space-between
+      min-height: 273px
+      width: 100%
+      margin-top: 120px
+      //padding: 20px
+      //top: 120px
+      //overflow: auto
+      overflow-y: hidden
+
+      .content-loading-wrap
+        @include bp1024up
+          width: 205px
+
+        @include bp1920up
+          width: 258px
+
+      @include bp1024up
+        display: flex
+        position: absolute
+        flex-direction: column
+        overflow: auto
+        height: 100%
+        margin-top: 0
+        padding: 0
+        top: 110px
+
+
+    .one-post
+      border: 1px solid $colorGray
+      margin-bottom: 20px
+      margin-right: 20px
+      background-color: $colorWhite
+      border-radius: 0 0 5px 5px
+      padding-bottom: 2px
+      box-shadow: 2px 2px 3px 0 #cfcfcf
+      position: relative
+      cursor: pointer
+      width: 208px
+      //min-width: 155px
+      height: 334px
+      //display: flex
+      //flex-direction: column
+
+      &:hover
+        //background-color: $colorBlack
+        ////border-left-color: $colorBlack
+        //.number_wrap
+        //  .number
+        //    background-color: $colorWhite
+        //    color: $colorBlack
+        //.fb-page-link, .one-post__created-at
+        //  color: $colorWhite!important
+
+
+      @include bp1920up // m_1920up
+        width: 260px
+        height: 410px
+
+    .number_wrap
+      position: absolute
+      right: -10px
+      top: 10px
+      z-index: 2
+      .number
+        width: 20px
+        height: 20px
+        background: rgb(50, 50, 50)
+        color: #fff
+        text-align: center
+        line-height: 20px
+        font-size: 10px
+        border-radius: 2px
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5)
+        @include bp1920up // m_1920up
+              width: 26px
+              height: 26px
+              line-height: 26px
+              font-size: 16px
+
+      .triangle
+        $w: 7px
+        content: ''
+        display: block
+        border-bottom: $w solid #000
+        border-left: $w solid transparent
+        border-top: $w solid transparent
+        border-right: $w solid transparent
+        position: absolute
+        left: 2px
+        top: 12.5px
+        transform: rotate(-45deg)
+        z-index: -1
+        @include bp1920up // m_1920up
+              left: 8px
+              top: 18px
+
+
+    .one-post__fb-post-link
+      display: block
+    //.one-post__image
+    //  height: auto
+    //  width: 164.5px
+    //  position: relative
+    //  left: -1px
+    //  top: -1px
+
+    .post-image-container
+      position: relative
+      //display: flex
+      background-color: #eee
+      height: 112px
+      //background-size: cover
+      //background-repeat: no-repeat
+      //background-position: center center
+
+      @include bp1920up
+        height: 140px
+
+      .post-image
+        height: 100%
+        //@include bp1920up // m_1920up
+        //      height: 117px
+        background-size: cover
+        //background-color: #eee
+        background-repeat: no-repeat
+        background-position: center center
+        position: relative
+
+      .fb-image
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center center
+        position: absolute
+        height: 20%
+        width: 20%
+        bottom: 10px
+
+    .body-wrap
+      flex: 1
+      display: flex
+      flex-direction: column
+      padding: 13px
+      height: calc(100% - 112px)
+
+      @include bp1920up
+        height: calc(100% - 140px)
+        padding: 16px
+
+      .header
+        //border-bottom: 1px solid $colorGray
+        display: flex
+        justify-content: space-between
+        margin-bottom: 8px
+
+        @include bp1920up
+          margin-bottom: 10px
+
+        .fb-page-link
+          font-family: $fontSofiaSemi
+          font-size: 10px
+          text-transform: uppercase
+          color: $colorBlack
+
+        .created-at
+          font-family: $fontSofiaReg
+          font-size: 8px
+          height: 8px
+          letter-spacing: 0px
+          line-height: 8px
+          width: 111.2px
+          color: $color82
+
+          @include bp1920up
+            font-size: 10px
+            height: 10px
+            letter-spacing: 0px
+            line-height: 10px
+            width: 139px
+
+      .message
+        font-size: 14px
+        overflow: hidden
+        //flex: 1
+        color: $colorBlack
+        height: 72px
+        margin-bottom: 8px
+        font-family: $fontSofiaReg
+        letter-spacing: 0px
+        line-height: 18px
+        width: 156px
+
+        @include bp1920up
+          font-size: 18px
+          overflow: hidden
+          //flex: 1
+          color: $colorBlack
+          height: 88px
+          margin-bottom: 10px
+          font-family: $fontSofiaReg
+          letter-spacing: 0px
+          width: 195px
+
+      .content-fb-link
+        display: flex
+        flex-direction: row
+        height: 25px
+        width: 20%
+
+        @include bp1920up
+          height: 30px
+          width: 25%
+
+        .content-fb-logo
+          //background: url('../../../../static/images/content-fb-logo.png') no-repeat
+          //background: url('../../../../static/images/content-fb-logo.png') no-repeat
+          background-size: contain
+          width: 30px
+          height: 100%
+
+        .fb-external-link
+          //background: url('../../../../static/images/content-fb-link.png') no-repeat
+          background-size: contain
+          width: 13px
+          height: 13px
+          margin-left: 2px
+          align-self: flex-end
+
+      .separator
+        border-bottom: 1px solid #cdcdcd
+        height: calc(100% - 173px)
+
+        @include bp1920up
+          height: calc(100% - 215px)
+
+      .stats
+        border-top: 1px solid $colorGray
+        border-bottom: 1px solid $colorGray
+        height: 22px
+
+        @include bp1920up
+          height: 28px
+
+        ul
+          display: flex
+          justify-content: space-between
+          //font-size: 10px
+          padding: 6px 0
+          margin-block-start: 0
+          margin-block-end: 0
+          @include bp1920up // m_1920up
+            //padding: 2px 12px 4px
+            //font-size: 13px
+
+          > li
+            display: flex
+            list-style: none
+            > span
+              color: $colorBlack
+              font-family: $fontSofiaSemi
+              margin-left: 15px
+              line-height: 9.6px
+              font-size: 10px
+              height: 10px
+              letter-spacing: 0px
+              width: 32px
+
+          .fb-ico
+            //display: inline-block
+            height: 10px
+            width: 9.6px
+            position: absolute
+            color: $colorBlack
+            @include bp1920up // m_1920up
+              height: 12px
+              width: 12px
+            //top: 4px
+
+            &.likes-svg
+
+            &.shares-svg
+
+            &.comments-svg
+
+
+        .one-post__likes
+        .one-post__shares
+        .one-post__comments
+
+      .emotions-box-component
+        height: 50px
+        margin: 5px 0 0
+
+        .emo-smiles-box
+          justify-content: space-between
+        .emo-title
+          font-size: 8px
+        .emo-val
+          font-size: 12px
+          margin-left: 3px
+
+
+      //.emotions
+      //  .title
+      //    font-size: 8px
+      //    font-family: $fontSofiaSemi
+      //    padding: 8px 0
+      //    color: $colorBlack
+      //    height: 8px
+      //    letter-spacing: 0.33px
+      //    line-height: 8px
+      //    width: 111.2px
+      //
+      //    @include bp1920up
+      //      font-size: 11px
+      //      font-family: $fontSofiaSemi
+      //      padding: 10px 0
+      //      color: $colorBlack
+      //      height: 10px
+      //      letter-spacing: 0.46px
+      //      line-height: 10px
+      //      width: 139px
+      //
+      //  .em-wrap
+      //    display: flex
+      //    justify-content: space-between
+      //    position: relative
+      //    height: 24px
+      //    padding: 8px 0
+      //
+      //    @include bp1920up
+      //      height: 30px
+      //      padding: 10px 0
+      //
+      //  .em
+      //    &.pos
+      //      display: flex
+      //      align-items: center
+      //      justify-content: center
+      //      height: 100%
+      //      width: 58px
+      //
+      //      @include bp1920up
+      //        height: 30px
+      //        width: 72px
+      //
+      //      .primary-emo
+      //        height: 24px
+      //        width: 24px
+      //        display: flex
+      //        justify-content: center
+      //        align-items: center
+      //
+      //        @include bp1024up
+      //          height: 33px
+      //          width: 33px
+      //
+      //        .svg-primary
+      //
+      //    &.neg
+      //      display: flex
+      //      align-items: center
+      //      justify-content: center
+      //      height: 100%
+      //      width: 58px
+      //
+      //      @include bp1920up
+      //        height: 30px
+      //        width: 72px
+      //
+      //      .secondary-emo
+      //        height: 24px
+      //        width: 24px
+      //        display: flex
+      //        justify-content: center
+      //        align-items: center
+      //
+      //        @include bp1024up
+      //          height: 33px
+      //          width: 33px
+      //
+      //        .svg-secondary
+      //
+      //
+      //    &.neu
+      //      display: flex
+      //      align-items: center
+      //      justify-content: center
+      //      height: 100%
+      //      width: 58px
+      //
+      //      @include bp1920up
+      //        height: 30px
+      //        width: 72px
+      //
+      //      .third-emo
+      //        height: 24px
+      //        width: 24px
+      //        display: flex
+      //        justify-content: center
+      //        align-items: center
+      //
+      //        @include bp1024up
+      //          height: 33px
+      //          width: 33px
+      //
+      //        .svg-third
+      //
+      //
+      //  .per-val
+      //    color: $colorBlack
+      //    font-family: $fontSofiaSemi
+      //    font-size: 12px
+      //    //height: 32px
+      //    letter-spacing: 0px
+      //    line-height: 12.8px
+      //    width: 24px
+      //    padding-left: 4px
+      //
+      //    @include bp1920up
+      //      color: $colorBlack
+      //      font-family: $fontSofiaSemi
+      //      font-size: 15px
+      //      //height: 40px
+      //      letter-spacing: 0px
+      //      line-height: 16px
+      //      width: 30px
+      //      padding-left: 4px
+
+
+$marginSmall: 8px
+$marginBig: 10px
+$border1: 1px solid #cdcdcd
+
+
+.widget-box
+  margin: 20px 0
+  //width: 99%
+
+  //@include bp768up
+  //  height: 100px
+  //  margin: 0
+  ////
+  //@include bp1024up
+  //  min-width: 744px
+
+  .stats-widget
+    //display: flex
+    height: 100%
+    background-color: #f9fafb
+    border-radius: 5px
+    box-shadow: 0 2px 4px 0 rgb(205, 205, 205)
+
+    @include bp768up
+      display: flex
+
+    .item
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-start
+      width: 100%
+      flex: 1
+      position: relative
+      height: 50px
+      &::after
+        display: block
+        content: ''
+        border-bottom: $border1
+        position: absolute
+        height: 1px
+        width: calc(100% - 20px)
+        left: 10px
+        bottom: 0
+      &:last-child::after
+        display: none
+
+      @include bp768up
+        height: 100%
+        flex-direction: column
+        &::before
+          display: block
+          content: ''
+          position: absolute
+          border-right: $border1
+          height: calc(100% - 20px)
+          top: 10px
+          right: 0
+        &:last-child::before
+          display: none
+        &::after
+          display: none
+
+    .title
+      font-size: 12px
+      height: 10px
+      letter-spacing: 0px
+      line-height: 9.6px
+      width: 184px
+      font-family: $fontSofiaSemi
+      padding-top: 15px
+      padding-left: 10px
+
+      @include bp768up
+        font-size: 14px
+        height: 12px
+        letter-spacing: 0px
+        line-height: 12px
+        width: 230px
+        padding-left: 15px
+        padding-top: 21px
+
+    .value
+      font-size: 35px
+      height: 35px
+      letter-spacing: -0.97px
+      line-height: 36px
+      padding-right: 10px
+
+      @include bp768up
+        font-size: 45px
+        height: 42px
+        letter-spacing: -1.25px
+        line-height: 45px
+        width: 210px
+        padding-left: 12px
+        padding-bottom: 15px
+
+
+  .one-point-widget
+    $borderWhiteThemeColor: 1px solid #000
+    $borderDarkThemeColor: 1px solid #fff
+
+    height: 214px
+    border-radius: 5px
+    overflow: hidden
+    box-shadow: 0 2px 4px 0 rgb(170, 170, 170)
+    position: relative
+    display: flex
+    &.hide
+      display: none
+
+
+    .title
+      font-size: 13px
+      font-family: $fontSofiaSemi
+      line-height: 15px
+      padding-bottom: 5px
+      height: 30px
+    .val
+      color: #fff
+
+    .sidebar
+      //background-color: rgb(170, 170, 170)
+      width: 260px
+      padding: 15px
+      display: flex
+      flex-direction: column
+
+      .wrap
+        flex: 1
+        display: flex
+        .main-box
+          //background-color: #9ABC58
+          flex: 50%
+          margin-bottom: 10px
+          margin-right: 10px
+          border-right: $borderWhiteThemeColor
+          .val
+            font-size: 75px
+            .line-widget-emo-box
+              .emo-title
+                display: none
+              .emo-val
+                font-size: 25px
+                padding-right: 5px
+
+        .sub-metrics-box
+          //background-color: #58bbbb
+          .val
+            font-size: 22px
+            margin: 5px 0
+      .date
+        display: flex
+        //background-color: #e9dbef
+        border-top: $borderWhiteThemeColor
+        padding-top: 10px
+        .title
+          margin-right: 10px
+        .val
+          font-size: 13px
+    .child
+      flex: 1
+      display: flex
+
+    .close-btn
+      position: absolute
+      right: 19px
+      width: 15px
+      top: 14px
+      cursor: pointer
+
+    &.dark-theme
+      .sidebar
+        .wrap
+          .main-box
+            border-right: $borderDarkThemeColor
+          .title
+            color: #cdcdcd
+        .date
+          border-top: $borderDarkThemeColor
+          .title
+            color: #cdcdcd
+
+
+    &.line-chart-view
+      border-right: $borderWhiteThemeColor
+
+    // BUBBLE CHART
+    &.bubble-chart-view
+      .sidebar
+        .wrap
+          flex-direction: column
+          .main-box
+            border-right: none
+            border-bottom: $borderWhiteThemeColor
+            margin-right: 0
+            .val
+              text-transform: capitalize
+              font-size: 55px
+      .sub-metrics-box
+        display: flex
+        justify-content: space-between
+        .item
+          border-right: $borderWhiteThemeColor
+          padding-right: 10px
+          margin-right: 10px
+          margin-bottom: 10px
+          &:last-child
+            border-right: none
+            padding-right: 0
+            margin-right: 0
+
+      .date
+        //margin-right: 10px
+      .widget-sidebar-emotions-wrap
+        width: 70px
+        margin: 10px
+        border-left: 1px solid
+        padding-left: 10px
+
+
+    .top-content-widget
+      flex: 1
+      border-radius: 5px
+      background-color: #fff
+      margin: 3px
+      padding: 15px
+      display: flex
+      flex-direction: column
+      .title
+        border-bottom: $border1
+      .loading-wrap
+        position: relative
+        .loading
+          width: 100%
+          position: absolute
+      .body
+        flex: 1
+        display: flex
+        padding: 15px 0 0 0
+        .nav-btn
+          min-width: 32px
+          background-color: #d8d8d8
+          cursor: pointer
+          position: relative
+          &::before
+            content: ''
+            position: absolute
+            display: block
+            border: 10px solid transparent
+            top: 50%
+            transform: translateY(-50%)
+          &:hover
+            background-color: #efefef
+
+          $arrowColor: #1d1e1f
+          &.left-btn::before
+            border-right-color: $arrowColor
+          &.right-btn::before
+            border-left-color: $arrowColor
+            left: 10px
+
+        .slider-box
+          flex: 1
+          margin: 0 10px
+          //background-color: #f6fff9
+          overflow: hidden
+
+        .slider
+          height: 100%
+          transition-duration: 350ms
+          .slide
+            height: 100%
+            display: inline-block
+            .slide-content-box
+              height: 100%
+              overflow: hidden
+              display: flex
+              .post
+                height: 100%
+                display: flex
+                flex: 1
+                .img
+                  flex: 0 0 140px
+                  height: 100%
+                  background-color: #eee
+                  background-size: cover
+                  background-repeat: no-repeat
+                  background-position: center center
+                .post-text-box
+                  padding: 0 10px
+                  border-right: $border1
+                  flex: 1
+                  min-width: 0
+                  .title-line
+                    display: flex
+                    justify-content: space-between
+                    font-size: 10px
+                    margin-bottom: 7px
+                    .title
+                      border: none
+                    .counter
+                    .comments-count
+                      .comments-ico
+                        display: inline-block
+                        width: 11px
+                        margin: 0 5px
+                    .link-ico
+                      width: 12px
+                      color: #000
+                  .text
+                    font-size: 14px
+                    line-height: 1.2
+                    text-align: justify
+                    height: 0
+              .comments
+                padding: 0 10px
+                .title-box
+                  .title
+                    font-size: 10px
+                  .comments-ico
+                  .link-ico
+                .comments-list
+                  .item
+                    font-size: 12px
+              .emotions-box-wrap
+                padding: 0 10px
+                flex: 0 0 60px
+
+
+

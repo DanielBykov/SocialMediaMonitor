@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>React Local Dev</title>
+  <link rel="stylesheet" type="text/css" href="css/app_v5.css">
+
+  <script>
+    let getArgs = {}
+    let ls = (location.search || '?foo=foo')
+    ls.split('?')[1].split('&').forEach(x=>{
+      let a = x.split('=')
+      getArgs[a[0]] = a[1]
+    })
+    window.getArgs = getArgs
+
+    window.appName = ('app' in getArgs) ? getArgs.app : 'sb'
+    window.companyID = ('companyID' in getArgs) ? getArgs.companyID : '16'
+
+    window.devMode = true
+    window.devModeLocal = true
+    window.apiURL = '/api/v5/'
+    window.apiURL_obj_img = '/api/obj-img/'
+    window.zavy__adminMode = true
+    window.radarShow = true
+
+    //window.companyID = "16"; // 2Degrees
+    //window.companyID = "132"; // Lion Red
+
+    window.companyList = [    {
+      id: 128,
+      displayName: 'NZ Demo'
+    }, ]
+    window.csrfmiddlewaretoken = '7KxZqbu0SheiafAL0CtDbAKBBYMp8qAYGrwScukSfdAZ4KqV7J7xc4BUyvGo3HJw'
+
+
+    function menuClick(app) {
+      console.log('getArgs: ',window.getArgs)
+      let coID = ( ( window.getArgs||{} ).companyID||'16')
+      location.href = '?app=' + app + '&companyID=' + coID
+    }
+  </script>
+</head>
+
+<body>
+
+<div id="reactAppV5" style=""></div>
+<!--<section class="content">-->
+<!--</section>-->
+
+<script src="app_v5.bundle.js"></script>
+</body>
+</html>

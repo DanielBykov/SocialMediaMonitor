@@ -1,0 +1,1819 @@
+@import '../normalize.css'
+@import '../font-sofia-pro/sofia-pro.css'
+@import "zavy-vars"
+@import "break-points-mixins"
+
+//@import "CompetotorList"
+//@import "AxisYFilter"
+@import "AppMonitor"
+@import "DatePicker"
+
+#djDebug
+  display: none!important
+
+html, body
+  height: 100%
+  margin: 0
+  padding: 0
+
+body
+  display: flex
+  flex-direction: column
+
+#reactAppV5
+  height: 100%
+  font-family: $fontSofiaReg
+  display: flex
+  flex-direction: column
+  overflow-x: hidden
+
+  //.all__ico
+  //  background-image: url("../img/svg/all.svg")
+  //.fb__ico
+  //  background-image: url("../img/svg/fb.svg")
+  //.tw__ico
+  //  background-image: url("../img/svg/tw.svg")
+  //.ig__ico
+  //  background-image: url("../img/svg/ig.svg")
+  //.yt__ico
+  //  background-image: url("../img/svg/yt.svg")
+  //.media__ico
+  //  background-position: center
+  //  background-repeat: no-repeat
+  //  background-size: contain
+  //  width: 24px
+  //  height: 24px
+  //  display: block
+  //
+  //.circular-loading
+  //  position: absolute
+  //
+  //.loading-freeze
+  //  pointer-events: none
+  //  opacity: 0.5
+
+  .box-header
+    font-family: $fontSofiaSemi
+    letter-spacing: 1px
+    line-height: 50px
+    font-size: 12px
+    text-transform: uppercase
+    color: $color82 !important
+    margin-right: 20px
+  .nav-list
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    .nav-item
+      height: 50px
+      padding: 0 7.5px
+      color: $colorGrayD
+      cursor: pointer
+      &:first-child
+        padding-left: 0
+      &:last-child
+        padding-right: 0
+      &:hover
+        color: $colorBlack
+      .nav-link
+        height: 50px
+        line-height: 50px
+        &.text
+          font-family: $fontSofiaSemi
+          font-size: 16px
+          @include bp1024up
+            font-size: 18px
+          &.active
+            color: $colorBlack
+
+
+  // Brake points Padding
+  #mainNavBar,
+  .media__wrap,
+  #metrics,
+  #metrics-select,
+  #dateRange__fixedRange,
+  .dp__wrap
+    padding: 0 15px
+    @include bp768
+      padding: 0 20px
+    @include bp1024up
+      padding: 0 30px
+
+  #media, #metrics-select, #dateRange__fixedRange
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @include bp768up
+      justify-content: flex-start
+
+  // Main Menu
+  .nav-mobile
+    width: 100%
+    &.open
+      min-height: 50px
+
+  #mainNavBar
+    background-color: $colorBlack
+
+    .nav-bar__wrap
+      min-height: 50px
+      font-family: $fontSofiaSemi
+      background-color: $colorBlack
+
+      //position: absolute
+      top: 0px
+      //width: calc(100% - 30px)
+      z-index: 100
+
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: space-between
+
+    .main-nav__zavy-logo
+      //margin-top: 3px
+      //padding: 0
+      flex: 0 0 80px //width: 80px
+      height: 50px
+      background: url("../img/svg/zavy-logo.svg") center no-repeat
+      background-size: contain
+      opacity: 0.8
+
+      //Dev
+      //&:before
+      //  content: '320'
+      //  position: absolute
+      //  top: 0
+      //  left: 0
+      //  font-size: 10px
+      //  @include bp768
+      //    color: red
+      //    content: '768'
+      //  @include bp1024
+      //    color: green
+      //    content: '1024'
+      //  @include bp1440up
+      //    color: blue
+      //    content: '1440'
+
+
+    &.open
+      z-index: 100
+      position: absolute
+      width: calc(100% - 30px)
+      @include bp768up
+        width: calc(100% - 40px)
+
+      #mainMenu
+        display: block
+        flex-basis: 100%
+      #mediaMetrics
+        margin-top: 50px
+
+
+    #mainMenu
+      display: none
+      order: 5
+      @include bp1024up
+        display: block
+        flex: 1
+        order: 0
+        flex-basis: 0!important
+
+      .app-pages
+        margin: 10px 0 0 30px
+        padding: 0
+        @include bp1024up
+          display: flex
+          margin: 0 0 0 46px
+      .nav-item
+        margin-bottom: 25px
+        @include bp1024up
+          margin: 0 40px 0 0
+
+        .nav-link__ico
+          position: relative
+          color: $colorWhite
+          opacity: 0.7
+          text-decoration: none
+
+          margin-left: 0
+
+          &:hover
+            opacity: 0.9
+
+          &.active
+            opacity: 1
+
+          &::before
+            content: ''
+            display: block
+            width: 14px
+            height: 14px
+            position: absolute
+            top: calc(50% - 6px)
+            margin-left: -21px
+
+            background-position: center center
+            background-repeat: no-repeat
+            background-size: contain
+            background-color: black
+
+          &.sb-ico::before
+            background-image: url('../img/svg/scoreborad.svg')
+          &.pls-ico::before
+            background-image: url('../img/svg/pulse.svg')
+          &.map-ico::before
+            background-image: url('../img/svg/map.svg')
+          &.pg-ico::before
+            background-image: url('../img/svg/pages.svg')
+          &.cnv-ico::before
+            background-image: url('../img/svg/conversation.svg')
+
+        &.active
+          .nav-link__ico
+            opacity: 1
+
+      .login-box-li
+        margin: 0 0 0 10px
+        padding: 0
+        @include bp1024up
+          display: none
+        .nav-link
+          color: #fff
+          opacity: 0.7
+          text-decoration: none
+          &:hover
+            opacity: 1
+
+      //.login-box-sm
+      //  border-top: 1px solid
+      //  @include bp768up
+      //    display: none
+
+      .sep-line
+        width: 100%
+        border-top: 1px solid #6b6b6b
+        margin-bottom: 20px
+        @include bp1024up
+          display: none
+
+
+      .nav-link__ico
+        &::before
+          $w: 20px
+          width: $w
+          height: $w
+          margin-left: $w * -1
+          top: calc(50% - #{$w/2})
+
+
+    .navbar-toggler
+      width: 22px
+      height: 22px
+      background: url("../img/svg/hamburger.svg") center no-repeat
+      background-size: contain
+      cursor: pointer
+      @include bp1024up
+        display: none
+
+
+    .select-company__wrap
+      flex: 1
+
+      .select-company__block
+        max-width: 250px
+        padding: 0 20px
+        margin: 0 auto
+        @include bp768up
+          margin: 0 0 0 auto
+
+
+    .login-box
+      display: none
+      @include bp1024up
+        display: block
+      order: 2
+      .login-md__ico
+        background-image: url("../img/svg/logout.svg")
+        width: 24px
+        height: 24px
+        display: block
+        opacity: 0.6
+        &:hover
+          opacity: 1
+          //background-image: url("../img/svg/account__hover.svg")
+
+      .dev-info
+        position: absolute
+        font-size: 8px
+        color: $colorGray
+        &:hover
+          color: $colorWhite
+
+
+  // MediaMetrics Row
+  //#mediaMetrics
+  //  display: flex
+  //  flex-wrap: wrap
+  //  background-color: $colorGrayLL
+  //
+  //  .media__wrap
+  //    flex: 1
+  //    //@include bp1024up
+  //      //flex: 0
+  //    //&.full
+  //    //  flex: 1
+  //
+  //    border-bottom: $border
+  //    min-height: 50px
+  //
+  //    #media
+  //      display: flex
+  //
+  //      .nav-list
+  //        .nav-item
+  //          .nav-link
+  //            width: 24px
+  //            height: 50px
+  //            display: block
+  //            background-position: center
+  //            background-repeat: no-repeat
+  //            opacity: 0.35
+  //            &:hover
+  //              opacity: 0.8
+
+              &.active
+                cursor: auto
+                opacity: 1
+                &:hover
+                  opacity: 1
+
+
+
+    .metrics__wrap
+      flex-grow: 100
+      min-height: 50px
+      position: relative
+
+      &:before
+        content: ""
+        display: block
+        height: 40px
+        width: 1px
+        background: $colorGrayL
+        position: absolute
+        top: 5px
+
+      #metrics
+        flex-grow: 1
+        border-bottom: $border
+        display: none
+        min-height: 50px
+
+        @include bp768up
+          display: flex
+          justify-content: flex-start
+
+        .metrics__select
+          display: none
+
+        //.nav-list
+        //  .nav-item
+        //    .nav-link
+        //      font-size: 15px
+        //      color: $colorGrayD
+        //      &.active
+        //        color: $colorBlack
+        //        font-weight: bold
+        //      &:hover
+        //        color: $colorBlack
+
+    #metrics-select
+      border-bottom: $border
+      @include bp768up
+        display: none
+
+      select
+        width: 213px
+        height: 28px
+        color: $color82
+        border: $border
+        border-radius: 3px
+        padding: 3px 5px
+        margin-left: 10px
+        font-size: 14px
+
+
+  // DatePicker Row
+  .date-range-line__wrap
+    display: flex
+    flex-wrap: wrap
+    flex-shrink: 0
+    background-color: $colorGrayLL
+
+    .box-header
+      //margin-right: 20px - 7px
+
+    //#dateRange__fixedRange
+    //  display: flex
+    //  flex: 1
+    //  @include bp768up
+    //    flex: 0
+    //  border-bottom: 1px solid #e1e1e2
+    //
+    //  @media (min-width: 767.98px)
+    //    max-width: 300px
+    //  .fixed-range__item
+    //    &:hover .fixed-range__link
+    //      color: $colorBlack
+    //    .fixed-range__link
+    //      padding: 0.5rem
+    //      color: $color82
+    //      &.active
+    //        color: $colorBlack
+    //        font-weight: bold
+    //
+    //#dateRange__datePicker
+    //  border-bottom: 1px solid #e1e1e2
+    //  position: relative
+    //  flex: 1
+    //  @include bp768up
+    //    flex: initial
+    //
+    //  &:before
+    //    content: ""
+    //    display: block
+    //    height: 40px
+    //    width: 1px
+    //    background: $colorGrayL
+    //    position: absolute
+    //    top: 5px
+    //
+    //  .dp__wrap
+    //    display: flex
+    //    height: 50px
+    //    align-items: center
+    //    justify-content: center
+    //
+    //    @include bp768up
+    //      flex: 0
+    //      justify-content: flex-start
+    //
+    //    .box-header
+    //      display: none
+    //      @include bp768up
+    //        display: inline-block
+    //
+    //  .dp-input-box
+    //    > div
+    //      display: inline-block
+    //    .react-datepicker__input-container
+    //      .date-picker-icon
+    //        display: block
+    //        width: 15px
+    //        height: 15px
+    //        background: url('../img/svg/date-picker__start.svg') no-repeat
+    //        position: absolute
+    //        top: 25%
+    //        left: 9px
+    //        opacity: 0.3
+    //        cursor: pointer
+    //      input
+    //        border: 1px solid $colorGray
+    //        border-radius: 3px
+    //        padding: 0 0 0 31px
+    //        width: 95px
+    //        color: $colorGrayD
+    //        height: 28px
+    //        font-size: 14px
+    //
+    //    &.from
+    //      margin-right: 20px
+    //    &.to
+    //      .react-datepicker__input-container
+    //        &:before
+    //          background: url('../img/svg/date-picker__end.svg') no-repeat
+    //
+    //  .react-datepicker-popper
+    //    z-index: 100
+    //    left: -30px!important
+    //
+    //  .react-datepicker-popper, .react-datepicker__portal
+    //    .react-datepicker__day--in-range:not(.react-datepicker__day--in-selecting-range)
+    //      color: $color82
+    //      background-color: $colorGrayL
+    //
+    //    .react-datepicker__day--range-start
+    //      color: $colorWhite!important
+    //      background-color: $colorBlack!important
+    //      border-radius: 0.3em
+    //
+    //    .react-datepicker__day--range-end
+    //      color: $colorWhite!important
+    //      background-color: $colorBlack!important
+    //
+    //    .react-datepicker__day--today
+    //      //border: 2px solid $colorBlack
+    //
+    //    //.react-datepicker__day--selected
+    //    //  background-color: $colorBlack
+    //
+    //    .react-datepicker__day--in-selecting-range:not(.react-datepicker__day--in-range)
+    //      background-color: $colorGrayL
+    //
+    //
+    //    .react-datepicker__day--in-range
+    //      background-color: $colorGrayD
+
+
+    .export-block
+      position: relative
+      flex: 1
+      display: none
+      justify-content: flex-end
+      align-items: center
+      padding: 0 20px
+      border-bottom: $border
+      &:before
+        content: ""
+        display: block
+        height: 40px
+        width: 1px
+        background: #e1e1e2
+        position: absolute
+        top: 5px
+        left: 0
+      .export-ico
+        cursor: pointer
+        width: 24px
+        height: 24px
+        background-image: url("../img/svg/export.svg")
+        opacity: 0.5
+        &:hover
+          opacity: 1
+
+      @include bp768up
+        display: flex
+
+      .export-pop-up
+        max-width: 200px
+        position: absolute
+        top: 46px
+        right: 30px
+        z-index: 100
+        background-color: $colorWhite
+        border-radius: 2px
+        box-shadow: 0 1px 2px 0 $colorGray
+        border: 1px solid $colorGray
+        padding: 15px
+        display: none
+
+        &::before
+          content: ''
+          position: absolute
+          display: block
+          width: 10px
+          height: 10px
+          border: 1px solid $colorGray
+          border-bottom: none
+          border-right: none
+          background-color: $colorWhite
+          top: -6px
+          left: 120px
+          transform: rotate(45deg)
+
+        .header
+          font-size: 16px
+          margin-bottom: 10px
+        .format__header
+          font-size: 11px
+          color: #aaa
+          margin-bottom: 5px
+        .format__list
+          border-bottom: 1px solid $colorGray
+          .format__item
+            display: inline-block
+            font-size: 16px
+            margin: 0 15px 10px 0
+            cursor: pointer
+            &:hover
+              opacity: 0.5
+            &.inactive
+              cursor: default
+              opacity: 0.5
+
+      &.active-pop-up
+        .export-pop-up
+          display: block
+        .export-ico
+          opacity: 1
+
+
+  //.chart-with-cpt-list__wrap
+  //  display: flex
+  //  position: relative
+  //  flex: 1
+  //  min-height: 400px
+  //
+  //  &.map
+  //    @include bp1024up
+  //      width: calc(100% - 200px)
+  //    @include bp1920up // m_1920up
+  //      width: calc(100% - 250px)
+  //
+  //  .chart_wrap
+  //    width: 70%
+  //    flex: 1
+  //    //outline: $border
+  //    padding: 10px 15px 0px 0px
+  //    margin-left: -10px
+  //    height: calc(100% - 10px)
+  //
+  //
+  //    @include bp768up
+  //      padding: 27px 15px 25px 6px
+  //      height: calc(100% - 27px - 25px)
+  //
+  //    @include bp1024up
+  //      margin-right: 200px
+  //      margin-left: 0
+  //
+  //    .highcharts-react__wrap
+  //      height: 100%
+  //      > div
+  //        height: 100%
+
+
+
+
+  //// Scoreboard
+  //.tree-map__wrap
+  //  flex: 1
+  //  position: relative
+  //  .scoreboard-tree-map-component
+  //    width: 100%
+  //    height: 100%
+  //
+  //    .node
+  //      .logo-wrap
+  //        &:hover .bg-img > img
+  //          filter: none
+  //        .bg-img > img
+  //          filter: grayscale(1)
+  //
+  //
+  //// Pulse
+  //.pulse-summary__wrap
+  //  .summary__wrap
+  //    width: 100%
+  //
+  //
+  //// Map
+  //.map-main__wrap
+  //  @include bp1024up
+  //    display: flex
+  //    flex-direction: column
+  //    flex: 1
+  //    position: relative
+  //
+  //
+  //        //&:hover
+  //        //  background-color: $color82
+  //
+  //  .top-posts__sidebar
+  //    min-height: 273px
+  //
+  //    @include bp1024up
+  //      width: 195px
+  //      height: 100%
+  //      position: absolute
+  //      right: 0
+  //      top: 0
+  //      overflow-y: auto
+  //      outline: $border
+  //      .top-posts__wrap
+  //        margin-left: 0
+  //        .post-items-container
+  //          display: block
+  //
+  //    .loading-more__wrap
+  //      margin: 30px 15px
+  //      height: 30px
+  //      min-width: 100px
+  //      .title
+  //        font-size: 12px
+  //        text-align: center
+  //
+  //    @include bp1920up // m_1920up
+  //      width: 240px
+
+
+  /////////////////////
+  // Pages Flex
+  //$cellHeight_320: 52px
+  //$cellWidth_320: 56px
+  //$fontSize_320: 10px
+  //$cellHeight_768up: 64px
+  //$cellWidth_768up: 70px
+  //$fontSize_768up: 12px
+  //$mediaNodeWidth: 96px
+  //@mixin mediaNodeWidth()
+  //  min-width: $mediaNodeWidth
+  //  max-width: $mediaNodeWidth
+  //.tab-container__flex
+  //  flex: 1px
+  //  display: flex
+  //  flex-direction: column
+  //  position: relative
+  //  //min-height: 250px
+  //  .table
+  //    flex: 1px
+  //    overflow-x: auto
+  //    margin: 0 10px
+  //    .row
+  //      display: flex
+  //      justify-content: space-between
+  //    .cell
+  //      flex: 1
+  //      //background-color: #d7eccb
+  //
+  //    .tab-header
+  //      display: flex
+  //      .corner-cell
+  //        border-bottom: 2px solid $colorGray
+  //        @include mediaNodeWidth
+  //      .logos-list
+  //        flex: 1
+  //        border-bottom: 2px solid $colorGray
+  //        .cpt-logo__cell
+  //          height: 38px
+  //          width: $cellWidth_320
+  //          @include bp768up
+  //            width: $cellWidth_768up
+  //          display: flex
+  //          justify-content: center
+  //          align-items: center
+  //          .cpt-logo
+  //            display: block
+  //            background-size: contain
+  //            background-repeat: no-repeat
+  //            background-position: center
+  //            width: 80%
+  //            height: 80%
+  //            filter: grayscale(1)
+  //            &:hover
+  //              filter: none
+  //
+  //
+  //    .media-wrap
+  //      display: flex
+  //      position: relative
+  //      background: $colorGrayLL
+  //      //border-bottom: 1px solid $colorGray
+  //      //transition: 2s
+  //
+  //      &.fb
+  //        .bubble
+  //          background-color: #3b5999
+  //      &.tw
+  //        .bubble
+  //          background-color: #55acee
+  //      &.ig
+  //        .bubble
+  //          background-color: #e4405f
+  //      &.yt
+  //        .bubble
+  //          background-color: #cd201f
+  //
+  //      &.collapsed
+  //        height: 40px
+  //        @include bp768up
+  //          height: 44px
+  //
+  //        cursor: pointer
+  //        background: $colorWhite
+  //        .media-logo
+  //          position: absolute
+  //          z-index: 150
+  //          opacity: 0.3
+  //          left: 0
+  //          top: 2px
+  //        &:hover .media-logo
+  //          opacity: 1
+  //        .line
+  //          display: none
+  //        .metrics-vertical-list
+  //          display: none
+  //
+  //        .metrics-box
+  //          background: $colorWhite
+  //        .point
+  //          height: 0
+  //          overflow: hidden
+  //
+  //      .media-node
+  //        @include mediaNodeWidth
+  //        display: flex
+  //        border-bottom: 1px solid $colorGray
+  //        padding: 5px 0
+  //
+  //        //background-color: aquamarine
+  //        .node__wrap
+  //          height: 100%
+  //          display: flex
+  //          flex-direction: column
+  //          .line
+  //            $lineSIze: 2px
+  //            flex: 1
+  //            position: relative
+  //            &::before
+  //              content: ''
+  //              display: block
+  //              position: absolute
+  //              height: calc(100% - #{$lineSIze})
+  //              left: calc(50% - #{$lineSIze} - 1px)
+  //              width: 5px
+  //              border: $lineSIze solid $colorGrayD
+  //              border-right: none
+  //            &.up-line
+  //              margin-top: $cellHeight_320 / 2
+  //              @include bp768up
+  //                margin-top: $cellHeight_768up / 2
+  //              &::before
+  //                border-bottom: none
+  //            &.down-line
+  //              margin-bottom: $cellHeight_320 / 2
+  //              @include bp768up
+  //                margin-bottom: $cellHeight_768up / 2
+  //              &::before
+  //                border-top: none
+  //          .media-logo
+  //            padding: 5px 5px 5px 0
+  //            //background: #d366ff
+  //            .media__ico
+  //              margin: 0 auto
+  //              height: 20px
+  //              width: 20px
+  //              @include bp768up
+  //                height: 24px
+  //                width: 24px
+  //
+  //      .metrics-vertical-list
+  //        flex: 1
+  //        height: 66px
+  //
+  //        font-family: $fontSofiaSemi
+  //        font-size: $fontSize_320
+  //        @include bp768up
+  //          font-size: $fontSize_768up
+  //        text-align: end
+  //        //line-height: 66px
+  //        padding-right: 10px
+  //
+  //        .metric-title
+  //          height: $cellHeight_320
+  //          @include bp768up
+  //            height: $cellHeight_768up
+  //          display: flex
+  //          align-items: center
+  //          justify-content: flex-end
+  //
+  //
+  //    .metrics-box
+  //      flex: 1
+  //      border-bottom: 1px solid $colorGray
+  //      background: $colorGrayLL
+  //      padding: 5px 0
+  //
+  //      .point
+  //        //background-color: $colorGrayLL
+  //        height: $cellHeight_320
+  //        min-width: $cellWidth_320
+  //        font-size: $fontSize_320
+  //        @include bp768up
+  //          height: $cellHeight_768up
+  //          min-width: $cellWidth_768up
+  //          font-size: $fontSize_768up
+  //        text-align: center
+  //        position: relative
+  //        &:before // Middle Line
+  //          content: ''
+  //          display: block
+  //          width: 100%
+  //          //height: 1px
+  //          border-bottom: 1px solid #979797
+  //          position: absolute
+  //          //background: #979797
+  //          top: calc(50% - 1px)
+  //          z-index: 10
+  //        .value
+  //          position: absolute
+  //          top: calc(50% + 0.6em)
+  //          width: 100%
+  //          z-index: 20
+  //        .bubble__wrap
+  //          //position: absolute
+  //
+  //          width: $cellHeight_320 - 2px // 2px padding between bibles
+  //          @include bp768up
+  //            width: $cellHeight_768up - 2px
+  //          height: calc(100% - 2px)
+  //          display: flex
+  //          justify-content: center
+  //          align-items: center
+  //          margin: 0 auto
+  //          .bubble
+  //            border-radius: 1000px
+  //            opacity: 0.5
+  //
+  ///////////////////////
+  //
+  //
+  ///////////////////////
+  //// Conversation
+  //.cnv__wrap
+  //  max-width: 1100px
+  //  width: 100%
+  //  margin: 0 auto
+  //  position: relative
+  //  .header
+  //    font-family: $fontSofiaSemi
+  //  .brand-section
+  //    #BrandsDropdown
+  //      height: 40px
+  //      width: 540px
+  //      background: $colorWhite
+  //      margin: 30px auto
+  //      border-bottom: $border
+  //      position: relative
+  //      select
+  //        width: 100%
+  //        height: 100%
+  //        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5)
+  //        border-radius: 3px
+  //        border: 1px solid rgb(151, 151, 151)
+  //        font-family: $fontSofiaSemi
+  //        font-size: 22px
+  //        padding-left: 16px
+  //        -webkit-appearance: none
+  //        -moz-appearance: none
+  //        appearance: none
+  //        position: relative
+  //        background-color: transparent
+  //        cursor: pointer
+  //        z-index: 2
+  //        &:focus
+  //          outline: none
+  //          //&+.tr
+  //          //  border-color: red
+  //        &:after
+  //          content: ''
+  //          display: block
+  //          position: absolute
+  //          width: 15px
+  //          height: 15px
+  //          background-color: #000
+  //
+  //        option
+  //      .tr
+  //        position: absolute
+  //        border: 7px solid $colorBlack
+  //        border-top-color: transparent
+  //        border-left-color: transparent
+  //        transform: rotate(45deg)
+  //        right: 20px
+  //        top: 7px
+  //  .search-by
+  //    .form
+  //      border-bottom: 1px solid #e1e1e2
+  //      margin: 0 auto
+  //      padding-bottom: 3px
+  //      width: 540px
+  //      display: flex
+  //      justify-content: center
+  //      .title, label
+  //        margin-right: 10px
+  //      label
+  //        cursor: pointer
+  //        &:hover
+  //          font-weight: 700
+  //        span
+  //          margin-left: 3px
+  //  .notice
+  //    text-align: center
+  //    margin-top: 20px
+  //    font-size: 21px
+  //  .charts-section
+  //    width: calc(100% - 30px)
+  //    display: flex
+  //    min-height: 100px
+  //    border-bottom: 1px solid #4A4A4A
+  //    padding: 15px
+  //    .total-sentiments
+  //      width: 250px
+  //
+  //      .sentiment-chart__wrap
+  //        border-bottom: $border
+  //        display: flex
+  //        justify-content: center
+  //
+  //      .sentiment-values
+  //        display: flex
+  //        .left-box
+  //          flex: 1
+  //          .item
+  //            display: flex
+  //            justify-content: space-between
+  //            border-bottom: $border
+  //            .title
+  //              margin-left: 10px
+  //              font-size: 12px
+  //              line-height: 27px
+  //            .val
+  //              font-size: 16px
+  //              line-height: 27px
+  //              margin-right: 10px
+  //        .right-box
+  //          flex: 1
+  //          display: flex
+  //          flex-direction: column
+  //          justify-content: center
+  //          align-items: center
+  //          .title
+  //            font-size: 12px
+  //          .val
+  //            font-size: 18px
+  //
+  //      .mentions__number
+  //        font-size: 24px
+  //      .mentions__title
+  //        font-size: 12px
+  //
+  //    .sentiment-trend
+  //      flex: 1
+  //      width: 0
+  //      margin-left: 20px
+  //      .chart__wrap
+  //        width: 100%
+  //  .post-section-wrap
+  //    position: relative
+  //    .loading
+  //      position: absolute
+  //      width: 100%
+  //    .posts-section
+  //      width: calc(100% - 30px)
+  //      display: flex
+  //      padding: 15px
+  //      min-height: 300px
+  //      //background-color: #a7a2ff
+  //      border-bottom: $border
+  //      .header-line
+  //        border-bottom: $border
+  //        display: flex
+  //        .header
+  //          flex: 1
+  //          line-height: 36px
+  //        .sorting-btn
+  //          font-family: $fontSofiaSemi
+  //          cursor: pointer
+  //          font-size: 12px
+  //          line-height: 36px
+  //          color: $colorGrayL
+  //          &.active
+  //            cursor: default
+  //            color: $colorBlack
+  //          &:hover
+  //            color: $colorBlack
+  //          &.first
+  //            margin-right: 20px
+  //            position: relative
+  //            &:after
+  //              position: absolute
+  //              content: ""
+  //              display: block
+  //              height: 17px
+  //              width: 1px
+  //              background-color: $colorGrayL
+  //              top: 11px
+  //              right: -10px
+  //
+  //
+  //      .posts
+  //        width: 60%
+  //        &.fixed
+  //          padding-top: 37px
+  //          .header-line
+  //            position: fixed
+  //            background-color: $colorWhite
+  //            z-index: 10
+  //            width: calc(60% - 33px)
+  //            max-width: 640px
+  //            top: 0
+  //        .post__item
+  //          cursor: pointer
+  //          margin-bottom: 15px
+  //          border-bottom: $border
+  //          opacity: 0.4
+  //          &.active
+  //            opacity: 1
+  //          &:hover
+  //            opacity: 1
+  //
+  //          .post__header
+  //
+  //            $lh: 36px
+  //
+  //            display: flex
+  //            align-items: center
+  //            .page-pic
+  //              width: 20px
+  //              height: 20px
+  //              border-radius: 50px
+  //              position: relative
+  //            .page-name
+  //              text-transform: uppercase
+  //              font-size: 13px
+  //              margin-left: 10px
+  //              margin-right: 10px
+  //              position: relative
+  //              line-height: $lh
+  //              //&:before
+  //              //  position: absolute
+  //              //  content: ''
+  //              //  display: block
+  //              //  width: 20px
+  //              //  height: 20px
+  //              //  background-color: $colorBlack
+  //              //  border-radius: 50px
+  //              //  top: 7px
+  //              //  left: -30px
+  //
+  //            .post-date
+  //              line-height: $lh
+  //              font-size: 13px
+  //              color: $color97
+  //            .nn
+  //              flex: 1
+  //              text-align: right
+  //              font-size: 8px
+  //            .post-fb-link
+  //              height: $lh
+  //              //background-color: rgba(105, 105, 105, 0.09)
+  //              //flex: 1
+  //              > a
+  //                display: block
+  //                margin-left: auto
+  //                width: 36px
+  //                height: 36px
+  //                background-image: url("../img/svg/external-link-alt-solid.svg")
+  //                background-position: center
+  //                background-repeat: no-repeat
+  //                background-size: 13px
+  //                &:hover
+  //                  opacity: 0.5
+  //          .post-body
+  //            display: flex
+  //            .post-img__wrap
+  //              min-width: 120px
+  //              .post-img
+  //                height: 100px
+  //                margin: 5px 15px 15px 0
+  //                background-size: cover
+  //                background-position: center
+  //            .post-text__wrap
+  //            .post-text
+  //              font-size: 18px
+  //              line-height: 24px
+  //              margin-bottom: 7px
+  //            .source-link
+  //              cursor: pointer
+  //              margin-bottom: 7px
+  //              > a
+  //                font-size: 14px
+  //                text-decoration: none
+  //                color: $colorBlack
+  //                &:hover
+  //                  color: $colorGray
+  //
+  //          .counters
+  //            display: flex
+  //            margin-bottom: 7px
+  //            .count
+  //              margin-right: 15px
+  //              padding-left: 20px
+  //              background-position: 0 1px
+  //              background-repeat: no-repeat
+  //              background-size: 12px
+  //              font-size: 12px
+  //            .likes
+  //              background-image: url("../img/svg/thumbs-up-regular.svg")
+  //            .comments-count
+  //              background-image: url("../img/svg/comment-regular.svg")
+  //            .shares
+  //              background-image: url("../img/svg/retweet-solid.svg")
+  //            .related
+  //              background-image: url("../img/svg/related-comments.svg")
+  //        .more-posts-btn
+  //          text-align: center
+  //          color: $color82
+  //          background-color: $colorGrayLL
+  //          outline: 2px solid
+  //          padding: 3px
+  //          font-size: 13px
+  //          cursor: pointer
+  //          &:hover
+  //            color: black
+  //
+  //
+  //      .comments
+  //        width: 40%
+  //        margin-left: 15px
+  //        &.fixed
+  //          position: fixed
+  //          top: 0
+  //          right: 0
+  //          width: calc(40% - 28px)
+  //          margin-right: 33px
+  //          height: calc(100vh - 40px)
+  //          .comments-list
+  //            overflow-y: auto
+  //        .comments-list
+  //          height: 100%
+  //        .comment__item
+  //          padding-bottom: 15px
+  //          border-bottom: $border
+  //          .com__header
+  //            $lh: 36px
+  //            display: flex
+  //            .com-date
+  //              line-height: $lh
+  //              font-size: 13px
+  //              color: $color97
+  //            .com-fb-link
+  //              height: $lh
+  //              flex: 1
+  //              > a
+  //                display: block
+  //                margin-left: auto
+  //                width: 36px
+  //                height: 36px
+  //                background-image: url("../img/svg/external-link-alt-solid.svg")
+  //                background-position: center
+  //                background-repeat: no-repeat
+  //                background-size: 13px
+  //                &:hover
+  //                  opacity: 0.5
+  //          .text
+  //            font-size: 14px
+  //            line-height: 20px
+  //
+  //// Summary
+  //.summary__wrap
+  //  position: relative
+  //  background-color: $colorGrayLL
+  //  outline: $border
+  //  //min-height: 100px
+  //
+  //  @include bp1024up
+  //    float: left
+  //    width: calc(100% - 196px)
+  //  @include bp1920up // m_1920up
+  //    width: calc(100% - 242px)
+  //
+  //  .summary__title
+  //    position: absolute
+  //    transform: rotate(90deg)
+  //    top: 45px
+  //    font-size: 10px
+  //    color: $color82
+  //    left: -12px
+  //    letter-spacing: 1.8px
+  //    @include bp768
+  //      left: -11px
+  //      font-size: 12px
+  //    @include bp1024up
+  //      left: 0
+  //      font-size: 12px
+  //  .summary__text
+  //    min-height: 70px
+  //    font-size: 14px
+  //    color: #666566
+  //    max-width: 600px
+  //    padding: 15px 15px 15px 37px
+  //    @include bp768
+  //      padding-left: 50px
+  //      margin-right: 175px
+  //    @include bp1024up
+  //      padding-left: 60px
+  //      margin-right: 175px
+  //
+  //
+  //// HelpTip
+  //.help-tip
+  //  background-color: $colorBlack
+  //  position: absolute
+  //  width: 140px
+  //  height: 35px
+  //  padding: 10px
+  //  bottom: 0
+  //  right: 20px
+  //  border-radius: 3px
+  //  box-shadow: 2px 2px 4px $colorBlack
+  //  color: #fff
+  //  font-size: 13px
+  //  line-height: 1
+  //  cursor: pointer
+  //  .info-ico
+  //    display: block
+  //    position: absolute
+  //    background-position: center center
+  //    background-size: cover
+  //    background-image: url("../img/svg/help-tip__active.svg")
+  //    width: 20px
+  //    height: 20px
+  //    top: 5px
+  //    right: 5px
+  //  .help-tip__p1
+  //    margin-bottom: 7px
+  //  .help-tip__p2
+  //    color: #aaa
+  //
+  //  &:hover
+  //    background-color: $colorGrayD
+  //    box-shadow: 2px 2px 4px $colorGrayD
+  //    .info-ico
+  //      background-image: url("../img/svg/help-tip__hover.svg")
+  //    .help-tip__p2
+  //      color: $colorBlack
+  //
+  //  @media (max-width: 767px)
+  //    display: flex
+  //    justify-content: center
+  //    align-items: center
+  //    height: 35px
+  //    padding: 0
+  //    position: relative
+  //    right: 0
+  //    width: calc(100% - 30px)
+  //    margin: 0 15px
+  //    .help-tip__p1
+  //      margin: 0px 10px
+  //
+  //
+  //// Tooltip (Pulse, Map)
+  //.tooltip-header__custom
+  //  font-family: SofiaPro-SemiBold
+  //  width: 130px
+  //  //height: 150px
+  //  .brand
+  //    text-align: center
+  //    font-size: 20px
+  //    white-space: normal
+  //    line-height: 1
+  //  .metric
+  //    font-family: SofiaPro-Regular
+  //    text-align: center
+  //    letter-spacing: 1px
+  //    font-size: 13px
+  //    white-space: normal
+  //  .val
+  //    text-align: center
+  //    font-size: 30px
+  //  .date
+  //    text-align: center
+  //    color: #4A4A4A
+  //    margin: 7px 0px
+  //.view-post-btn
+  //  background: #fd1717
+  //  color: #fff
+  //  text-align: center
+  //  padding: 4px
+  //  border-radius: 2px
+  //  margin: 3px
+  //  font-family: SofiaPro-SemiBold
+  //  cursor: pointer
+  //  &:hover
+  //    opacity: 0.6
+  //
+  //.point-cursor-pointer
+  //  cursor: pointer
+  //
+  //
+  //
+  ///////////////////////
+  //// Modal Custom  ///
+  //.modal-custom
+  //  display: none
+  //  position: fixed
+  //  width: calc(100% + 20px)
+  //  height: 100%
+  //  z-index: 100
+  //  top: 0
+  //  left: -10px
+  //
+  //  .modal-custom__close-btn
+  //    position: absolute
+  //    background: url('../img/svg/popup-close-button.svg') no-repeat
+  //    width: 30px
+  //    height: 30px
+  //    right: 25px
+  //    top: 25px
+  //    cursor: pointer
+  //    z-index: 110
+  //    opacity: 0.5
+  //    &:hover
+  //      opacity: 1
+  //
+  //  .modal-custom__wrap
+  //    background: rgba(0, 0, 0, 0.8)
+  //    width: 100%
+  //    height: 100%
+  //
+  //  .modal-custom__body
+  //    //width: 100%
+  //    //height: 100%
+  //    position: absolute
+  //    top: 50%
+  //    left: 50%
+  //    transform: translate(-50%, -50%)
+  //
+  //    .pop-up-post__wrap
+  //      height: 100%
+  //      display: flex
+  //      justify-content: center
+  //      align-items: center
+  //
+  //      &.dev
+  //        $padd: 15px 15px 0
+  //        .post__wrap__loading
+  //          display: flex
+  //          justify-content: center
+  //          align-items: center
+  //          width: 379px
+  //          height: 530px
+  //          padding-bottom: 20px
+  //          background-color: $colorWhite
+  //          border-radius: 3px
+  //          border: 2px solid #979797
+  //          &.no-post-img-height
+  //            height: 310px
+  //          .post__wrap
+  //            display: flex
+  //            flex-direction: column
+  //            height: 100%
+  //            width: 100%
+  //            .none
+  //              display: none
+  //            .img
+  //              height: 220px
+  //              background: center no-repeat
+  //              background-size: cover
+  //              &.no-img
+  //                background-image: url("../img/svg/no-image-icon.svg")!important
+  //                background-size: auto
+  //              &.none
+  //                display: none
+  //            .header
+  //              padding: $padd
+  //              display: flex
+  //              min-height: 70px
+  //              border-bottom: 1px solid $colorGrayL
+  //              .company-logo
+  //                width: 40px
+  //                background: no-repeat
+  //                background-size: 40px
+  //                margin-right: 15px
+  //              .mid-header-box
+  //                flex: 1
+  //                .company_name
+  //                  font-family: $fontSofiaSemi
+  //                  font-size: 18px
+  //                  margin-bottom: 5px
+  //                .date
+  //                  font-size: 12px
+  //                  color: $color82
+  //              .media-logo
+  //                height: 24px
+  //                width: 24px
+  //            .text
+  //              flex: 1
+  //              padding: $padd
+  //              color: $color82
+  //              font-size: 15px
+  //              line-height: 1.3
+  //              border-bottom: 1px solid $colorGrayL
+  //              height: 0
+  //              min-height: 117px
+  //              overflow: hidden
+  //              position: relative
+  //              &:before
+  //                content: "" // pseudo padding-bottom
+  //                display: block
+  //                width: 100%
+  //                height: 15px
+  //                background-color: #ffffff
+  //                position: absolute
+  //                bottom: 0
+  //                left: 0
+  //            .numbers
+  //              padding: $padd
+  //              display: flex
+  //              height: 30px
+  //              font-size: 15px
+  //              color: $color82
+  //              border-bottom: 1px solid $colorGrayL
+  //              .num
+  //                margin-right: 30px
+  //                padding-left: 20px
+  //                background-repeat: no-repeat
+  //                background-position: 0 3px
+  //              .likes
+  //                background-image: url("../img/svg/like.svg")
+  //              .comments
+  //                background-image: url("../img/svg/comment.svg")
+  //              .shares
+  //                background-image: url("../img/svg/share.svg")
+  //            .ext-link-box
+  //              padding: $padd
+  //
+  //              .link-button
+  //                display: block
+  //                height: 28px
+  //                line-height: 28px
+  //                width: 70%
+  //                border-radius: 3px
+  //                border: 1px solid $colorGrayD
+  //                color: $colorGrayD
+  //                text-align: center
+  //                text-decoration: none
+  //                font-size: 14px
+  //                margin: 0 auto
+  //                &:hover
+  //                  color: $colorBlack
+  //                  border-color: $colorBlack
+  //                &.inactive
+  //                  opacity: 0.5
+  //                  cursor: not-allowed
+  //                  pointer-events: none
+  //                  &:hover
+  //                    color: $colorGrayD
+  //                    border-color: $colorGrayD
+  //        .video
+  //          width: 380px
+  //          height: 220px
+  //          display: flex
+  //          justify-content: center
+  //          align-items: center
+  //
+  //      &.fb
+  //        transform: scale(0.65)
+  //        @include bp768up
+  //          transform: scale(1)
+  //        .fb-post
+  //          background-color: #fff
+  //      &.tw
+  //        transform: scale(0.5)
+  //        @include bp768up
+  //          transform: scale(0.8)
+  //      &.ig
+  //        transform: scale(0.5)
+  //        @include bp768up
+  //          transform: scale(0.8)
+  //        .fail
+  //          background-color: #fff
+  //          padding: 20px
+  //          border-radius: 3px
+  //      &.yt
+  //        transform: scale(0.6)
+  //        @include bp768up
+  //          transform: scale(1)
+  //
+  //
+  //// TopPosts
+  //$marginSmall: 8px
+  //$marginBig: 10px
+  //.top-posts__wrap
+  //  margin-left: 6px
+  //  @include bp768
+  //    margin-left: 10px
+  //  .top-posts__title
+  //    margin: 15px 10px 0
+  //    font-weight: 600
+  //
+  //  .post-items-container
+  //    display: flex
+  //    overflow: auto
+  //
+  //    .one-post
+  //      border: 1px solid $colorGray
+  //      margin: 10px
+  //      background-color: $colorWhite
+  //      border-radius: 0 0 5px 5px
+  //      padding-bottom: 2px
+  //      box-shadow: 2px 2px 3px 0 #cfcfcf
+  //      position: relative
+  //      cursor: pointer
+  //
+  //      display: flex
+  //      flex-direction: column
+  //
+  //      &:hover
+  //        background-color: $colorBlack
+  //        //border-left-color: $colorBlack
+  //        .number_wrap
+  //          .number
+  //            background-color: $colorWhite
+  //            color: $colorBlack
+  //        .fb-page-link, .one-post__created-at
+  //          color: $colorWhite!important
+  //
+  //      width: 155px
+  //      min-width: 155px
+  //      height: 220px
+  //
+  //      @include bp1920up // m_1920up
+  //        width: 200px
+  //        min-width: 200px
+  //        height: 285px
+  //
+  //    .number_wrap
+  //      position: absolute
+  //      right: -10px
+  //      top: 10px
+  //      z-index: 2
+  //      .number
+  //        width: 20px
+  //        height: 20px
+  //        background: rgb(50, 50, 50)
+  //        color: #fff
+  //        text-align: center
+  //        line-height: 20px
+  //        font-size: 10px
+  //        border-radius: 2px
+  //        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5)
+  //        @include bp1920up // m_1920up
+  //          width: 26px
+  //          height: 26px
+  //          line-height: 26px
+  //          font-size: 16px
+  //
+  //      .triangle
+  //        $w: 7px
+  //        content: ''
+  //        display: block
+  //        border-bottom: $w solid #000
+  //        border-left: $w solid transparent
+  //        border-top: $w solid transparent
+  //        border-right: $w solid transparent
+  //        position: absolute
+  //        left: 2px
+  //        top: 12.5px
+  //        transform: rotate(-45deg)
+  //        z-index: -1
+  //        @include bp1920up // m_1920up
+  //          left: 8px
+  //          top: 18px
+  //
+  //
+  //    .one-post__fb-post-link
+  //      display: block
+  //    //.one-post__image
+  //    //  height: auto
+  //    //  width: 164.5px
+  //    //  position: relative
+  //    //  left: -1px
+  //    //  top: -1px
+  //
+  //    .one-post__image-bg
+  //      height: 90px
+  //      @include bp1920up // m_1920up
+  //        height: 117px
+  //      background-size: cover
+  //      background-color: #eee
+  //      background-repeat: no-repeat
+  //      background-position: center center
+  //      //position: relative
+  //      //width: 154px
+  //      //left: 0
+  //      //top: -1px
+  //
+  //    .one-post__header
+  //      margin: 1px 1px 0
+  //      border-bottom: 1px solid $colorGray
+  //      font-family: SofiaPro-SemiBold
+  //
+  //      .fb-page-link
+  //        font-size: 14px
+  //        @include bp1920up // m_1920up
+  //          font-size: 18px
+  //        color: $colorBlack
+  //        line-height: 1
+  //        display: block
+  //        padding: 5px 0
+  //        text-decoration: none
+  //        margin: 0 $marginSmall
+  //        @include bp1920up // m_1920up
+  //          margin: 0 $marginBig
+  //          padding: 8px 0
+  //
+  //      .one-post__created-at
+  //        font-size: 10px
+  //        color: $color82
+  //        margin: 0 $marginSmall 4px
+  //        @include bp1920up // m_1920up
+  //          font-size: 13px
+  //          margin: 0 $marginBig 8px
+  //
+  //    .one-post__message
+  //      margin-bottom: 12px
+  //      font-size: 10px
+  //      color: $color82
+  //      overflow: hidden
+  //      flex: 1
+  //      padding: $marginSmall
+  //      line-height: 1.2
+  //      @include bp1920up // m_1920up
+  //        font-size: 13px
+  //        padding: $marginBig
+  //
+  //    .one-post__stats
+  //      border-top: 1px solid $colorGray
+  //      ul
+  //        display: flex
+  //        justify-content: space-between
+  //        font-size: 10px
+  //        margin: 0
+  //        padding: 0 10px 0px
+  //        @include bp1920up // m_1920up
+  //          padding: 2px 12px 4px
+  //          font-size: 13px
+  //
+  //        > li
+  //          list-style: none
+  //          > span
+  //            color: $color82
+  //            margin-left: 20px
+  //            line-height: 20px
+  //
+  //        .fb-ico
+  //          //display: inline-block
+  //          height: 20px
+  //          width: 15px
+  //          position: absolute
+  //          color: $color82
+  //          @include bp1920up // m_1920up
+  //            height: 17px
+  //            width: 17px
+  //            //top: 4px
+  //
+  //          &.likes-svg
+  //
+  //          &.shares-svg
+  //
+  //          &.comments-svg
+  //
+  //
+  //      .one-post__likes
+  //      .one-post__shares
+  //      .one-post__comments
+  //
+  //// DevMode Alert
+  //.admin-tool-bar
+  //  position: absolute
+  //  z-index: 1001
+  //  right: 0
+  //  font-size: 8px
+  //  margin: 1px 3px
+  //  opacity: 0.5
+  //  //outline: 1px solid #4A4A4A
+  //
+  //  .dev-mode
+  //    background-color: yellowgreen
+  //  .add-admin-styles
+  //    cursor: pointer
+  //    background-color: #a7a7a7
+  //    &.on
+  //      background-color: #1d5d90
+  //      color: #fff
+  //  .admin-link
+  //    background-color: #a7c1c7
+
+
+// Additional Admin Styles
+//.admin
+//  display: none
+//  background-color: $adminColor
+//  color: #fff
+//body.admin-styles
+//  .admin
+//    display: block
+//
+//.loading-wrap
+//  position: absolute
+//  width: 100%
+//  top: 0
+//  left: 0
+//  z-index: 1

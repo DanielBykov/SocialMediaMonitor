@@ -1,0 +1,111 @@
+#dateRange__fixedRange
+  display: flex
+  flex: 1
+  @include bp768up
+    flex: 0
+  border-bottom: 1px solid #e1e1e2
+
+  @media (min-width: 767.98px)
+    max-width: 300px
+  .fixed-range__item
+    &:hover .fixed-range__link
+      color: $colorBlack
+    .fixed-range__link
+      padding: 0.5rem
+      color: $color82
+      &.active
+        color: $colorBlack
+        font-weight: bold
+
+#dateRange__datePicker
+  border-bottom: 1px solid #e1e1e2
+  position: relative
+  flex: 1
+  @include bp768up
+    flex: initial
+
+  &:before
+    content: ""
+    display: block
+    height: 40px
+    width: 1px
+    background: $colorGrayL
+    position: absolute
+    top: 5px
+
+  .dp__wrap
+    display: flex
+    height: 50px
+    align-items: center
+    justify-content: center
+
+    @include bp768up
+      flex: 0
+      justify-content: flex-start
+
+    .box-header
+      display: none
+      @include bp768up
+        display: inline-block
+
+  .dp-input-box
+    > div
+      display: inline-block
+    .react-datepicker__input-container
+      min-width: 50px
+      .date-picker-icon
+        display: block
+        width: 15px
+        height: 15px
+        background: url('../img/svg/date-picker__start.svg') no-repeat
+        position: absolute
+        top: 25%
+        left: 9px
+        opacity: 0.3
+        cursor: pointer
+      input
+        border: 1px solid $colorGray
+        border-radius: 3px
+        padding: 0 0 0 31px
+        width: 95px
+        color: $colorGrayD
+        height: 28px
+        font-size: 14px
+
+    &.from
+      margin-right: 20px
+    &.to
+      .react-datepicker__input-container
+        &:before
+          background: url('../img/svg/date-picker__end.svg') no-repeat
+
+  .react-datepicker-popper
+    z-index: 100
+    left: -30px!important
+
+  .react-datepicker-popper, .react-datepicker__portal
+    .react-datepicker__day--in-range:not(.react-datepicker__day--in-selecting-range)
+      color: $color82
+      background-color: $colorGrayL
+
+    .react-datepicker__day--range-start
+      color: $colorWhite!important
+      background-color: $colorBlack!important
+      border-radius: 0.3em
+
+    .react-datepicker__day--range-end
+      color: $colorWhite!important
+      background-color: $colorBlack!important
+
+    .react-datepicker__day--today
+    //border: 2px solid $colorBlack
+
+    //.react-datepicker__day--selected
+    //  background-color: $colorBlack
+
+    .react-datepicker__day--in-selecting-range:not(.react-datepicker__day--in-range)
+      background-color: $colorGrayL
+
+
+    .react-datepicker__day--in-range
+      background-color: $colorGrayD

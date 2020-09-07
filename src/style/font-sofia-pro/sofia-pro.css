@@ -1,0 +1,46 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3747859, 2019-04-15T22:51:04-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: SofiaPro-Regular by Mostardesign
+ * URL: https://www.myfonts.com/fonts/mostardesign/sofia-pro/regular/
+ * 
+ * Webfont: SofiaPro-SemiBold by Mostardesign
+ * URL: https://www.myfonts.com/fonts/mostardesign/sofia-pro/semi-bold/
+ * 
+ * Webfont: SofiaPro-Regularitalic by Mostardesign
+ * URL: https://www.myfonts.com/fonts/mostardesign/sofia-pro/regular-italic/
+ * 
+ * Webfont: SofiaPro-SemiBolditalic by Mostardesign
+ * URL: https://www.myfonts.com/fonts/mostardesign/sofia-pro/semi-bold-italic/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3747859
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright &#x00A9; Olivier Gourvat - Mostardesign Type Foundry, 2019. All rights reserved.
+ * 
+ * © 2019 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/393013");
+
+  
+@font-face {font-family: 'SofiaPro-Regular';src: url('webfonts/393013_0_0.eot');src: url('webfonts/393013_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/393013_0_0.woff2') format('woff2'),url('webfonts/393013_0_0.woff') format('woff'),url('webfonts/393013_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'SofiaPro-SemiBold';src: url('webfonts/393013_1_0.eot');src: url('webfonts/393013_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/393013_1_0.woff2') format('woff2'),url('webfonts/393013_1_0.woff') format('woff'),url('webfonts/393013_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'SofiaPro-Regularitalic';src: url('webfonts/393013_2_0.eot');src: url('webfonts/393013_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/393013_2_0.woff2') format('woff2'),url('webfonts/393013_2_0.woff') format('woff'),url('webfonts/393013_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'SofiaPro-SemiBolditalic';src: url('webfonts/393013_3_0.eot');src: url('webfonts/393013_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/393013_3_0.woff2') format('woff2'),url('webfonts/393013_3_0.woff') format('woff'),url('webfonts/393013_3_0.ttf') format('truetype');}
+ 

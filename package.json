@@ -1,0 +1,53 @@
+{
+  "name": "zavy_static",
+  "scripts": {
+    "local-server": "webpack-dev-server -d --open --config webpack.local.js",
+    "build-dev": "webpack                      --config webpack.dev.js",
+    "build-prod": "webpack                      --config webpack.prod.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.1",
+    "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.10.0",
+    "path": "^0.12.7",
+    "postcss": "^7.0.32",
+    "postcss-loader": "^4.0.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.11.5",
+    "@material-ui/core": "^4.11.0",
+    "axios": "^0.20.0",
+    "highcharts": "^8.2.0",
+    "highcharts-react-official": "^3.0.0",
+    "moment": "^2.27.0",
+    "react": "^16.13.1",
+    "react-datepicker": "^3.1.3",
+    "react-dom": "^16.13.1",
+    "react-globally": "^1.1.0",
+    "react-radio-group": "^3.0.3",
+    "react-select": "^3.1.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  }
+}
