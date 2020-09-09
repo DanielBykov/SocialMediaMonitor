@@ -125,26 +125,26 @@ const SearchHooks = props => {
             label: 'ZAVY DEFINED TOPICS (Maximum 3 items)',
             options:
               tags
-                .filter(([value])=> ! chosenTopics.includes(value) )
-                .map(v=>(
+                .filter(([value]) => ! chosenTopics.includes(value) )
+                .map(([id, label]) => (
                   {
-                    value: v,
-                    label: v,
+                    value: id,
+                    label: label,
                     isDisabled: countPreDefTopics >= maxPreDefTopics
                   }))
           },
-          {
-            label: 'MY TOPICS',
-            options:
-              my_tags
-                .filter(([value])=> ! chosenTopics.includes(value) )
-                .map(v=>(
-                  {
-                    value: v,
-                    label: v,
-                    isDisabled: countPreDefTopics >= maxPreDefTopics
-                  }))
-          },
+          // {
+          //   label: 'MY TOPICS',
+          //   options:
+          //     my_tags
+          //       .filter(([value])=> ! chosenTopics.includes(value) )
+          //       .map(v=>(
+          //         {
+          //           value: v,
+          //           label: v,
+          //           isDisabled: countPreDefTopics >= maxPreDefTopics
+          //         }))
+          // },
 
 
         ]
@@ -213,7 +213,7 @@ const SearchHooks = props => {
             />
           </OutsideAlerter>
         </div>
-
+        .then(result => new Promise(resolve => setTimeout( ()=> resolve(result), 500 )))
 
       </div>
     )

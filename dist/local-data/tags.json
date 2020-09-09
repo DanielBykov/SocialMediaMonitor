@@ -1,0 +1,2370 @@
+{
+  "tags": [
+    [
+      1101,
+      "Russell McVeagh"
+    ],
+    [
+      1100,
+      "Chapman Tripp"
+    ],
+    [
+      1135,
+      "SKYCITY AKL"
+    ],
+    [
+      1102,
+      "Bell Gully"
+    ],
+    [
+      1106,
+      "Pascall"
+    ],
+    [
+      1107,
+      "The Natural Confectionery Co."
+    ],
+    [
+      1115,
+      "State Insurance"
+    ],
+    [
+      1097,
+      "Cotton On Body"
+    ],
+    [
+      1420,
+      "Qatar Airways"
+    ],
+    [
+      1253,
+      "SKODA AU"
+    ],
+    [
+      139,
+      "MeadowFreshNZ"
+    ],
+    [
+      1103,
+      "MinterEllisonRuddWatts"
+    ],
+    [
+      1142,
+      "Audi NZ"
+    ],
+    [
+      1116,
+      "Vero Insurance"
+    ],
+    [
+      1098,
+      "New Balance"
+    ],
+    [
+      1104,
+      "Kensington Swan"
+    ],
+    [
+      1109,
+      "Skittles"
+    ],
+    [
+      1426,
+      "Sky SportNZ"
+    ],
+    [
+      1219,
+      "Blackcaps"
+    ],
+    [
+      1270,
+      "Vernon Tava"
+    ],
+    [
+      1208,
+      "Volkswagen AU"
+    ],
+    [
+      1257,
+      "Volkswagen AU"
+    ],
+    [
+      1117,
+      "QBE Insurance"
+    ],
+    [
+      1105,
+      "Simpson Grierson"
+    ],
+    [
+      1143,
+      "Lexus NZ"
+    ],
+    [
+      1110,
+      "Sour Patch Kids"
+    ],
+    [
+      1118,
+      "Zurich Insurance"
+    ],
+    [
+      1112,
+      "Werther's Original"
+    ],
+    [
+      1087,
+      "Bluebird"
+    ],
+    [
+      1141,
+      "Mercedes-Benz NZ"
+    ],
+    [
+      1084,
+      "Yenda"
+    ],
+    [
+      1086,
+      "XXXX"
+    ],
+    [
+      779,
+      "Lion"
+    ],
+    [
+      145,
+      "DominosAU"
+    ],
+    [
+      146,
+      "SkyTVNZ"
+    ],
+    [
+      219,
+      "Peroni"
+    ],
+    [
+      241,
+      "Codys"
+    ],
+    [
+      238,
+      "Long White Vodka"
+    ],
+    [
+      248,
+      "Great Northern"
+    ],
+    [
+      242,
+      "Boundary Road Brewery"
+    ],
+    [
+      243,
+      "Untold Rum"
+    ],
+    [
+      245,
+      "ORCHARD THIEVES CIDER"
+    ],
+    [
+      239,
+      "Somersby"
+    ],
+    [
+      1242,
+      "St John NZ"
+    ],
+    [
+      1108,
+      "RJ's Licorice"
+    ],
+    [
+      1008,
+      "Häagen-Dazs NZ"
+    ],
+    [
+      1022,
+      "Postie"
+    ],
+    [
+      1054,
+      "Carls Jr NZ"
+    ],
+    [
+      1023,
+      "United Australia Party"
+    ],
+    [
+      991,
+      "ActewAGL"
+    ],
+    [
+      1004,
+      "Little Island"
+    ],
+    [
+      1003,
+      "KapitiNZ"
+    ],
+    [
+      1005,
+      "Puhoi Valley"
+    ],
+    [
+      1006,
+      "Puhoi Valley"
+    ],
+    [
+      1007,
+      "Primo"
+    ],
+    [
+      1047,
+      "Australis Cosmetics"
+    ],
+    [
+      1027,
+      "Adelaide Oval"
+    ],
+    [
+      1056,
+      "Macpac"
+    ],
+    [
+      1029,
+      "Suncorp Stadium"
+    ],
+    [
+      994,
+      "Macquarie Telcom"
+    ],
+    [
+      1057,
+      "Torpedo7"
+    ],
+    [
+      1041,
+      "Pauline Hanson"
+    ],
+    [
+      1058,
+      "Bivouac Outdoor"
+    ],
+    [
+      1002,
+      "Suncorp"
+    ],
+    [
+      621,
+      "Garage Project"
+    ],
+    [
+      640,
+      "Tourism New Zealand"
+    ],
+    [
+      645,
+      "BurgerFuel"
+    ],
+    [
+      664,
+      "Macs Non-alcoholic"
+    ],
+    [
+      1095,
+      "Puma"
+    ],
+    [
+      687,
+      "AA Traveller"
+    ],
+    [
+      733,
+      "Lime Scooters"
+    ],
+    [
+      738,
+      "Mercury Go"
+    ],
+    [
+      757,
+      "Trade Me Jobs"
+    ],
+    [
+      644,
+      "Burger King NZ"
+    ],
+    [
+      649,
+      "Subway NZ"
+    ],
+    [
+      650,
+      "Wendys NZ"
+    ],
+    [
+      764,
+      "Blackcaps NZ"
+    ],
+    [
+      739,
+      "Powerball"
+    ],
+    [
+      663,
+      "MacsNZ"
+    ],
+    [
+      666,
+      "Sylvia Park"
+    ],
+    [
+      758,
+      "TRA"
+    ],
+    [
+      760,
+      "Kathmandu"
+    ],
+    [
+      698,
+      "Jetstar NZ"
+    ],
+    [
+      700,
+      "Virgin Australia"
+    ],
+    [
+      702,
+      "Beef + Lamb"
+    ],
+    [
+      684,
+      "Farm Source"
+    ],
+    [
+      221,
+      "Pure Blonde"
+    ],
+    [
+      223,
+      "Stella Artois"
+    ],
+    [
+      213,
+      "4 Pines Brewing Company"
+    ],
+    [
+      215,
+      "Bundaberg Rum"
+    ],
+    [
+      940,
+      "Contact Energy"
+    ],
+    [
+      939,
+      "Fisher and Paykel"
+    ],
+    [
+      893,
+      "Karma Cola"
+    ],
+    [
+      973,
+      "JB Hi-Fi"
+    ],
+    [
+      786,
+      "Pride"
+    ],
+    [
+      791,
+      "Black Friday"
+    ],
+    [
+      1051,
+      "Burger King NZ"
+    ],
+    [
+      851,
+      "Singapore Air"
+    ],
+    [
+      481,
+      "Skycity group"
+    ],
+    [
+      490,
+      "The Grill"
+    ],
+    [
+      523,
+      "Placemakers"
+    ],
+    [
+      525,
+      "Carters"
+    ],
+    [
+      521,
+      "Mitre 10 Trade"
+    ],
+    [
+      584,
+      "LG"
+    ],
+    [
+      585,
+      "Unitec"
+    ],
+    [
+      613,
+      "McDonalds NZ"
+    ],
+    [
+      591,
+      "Auckland City Council"
+    ],
+    [
+      316,
+      "Stirling Sports"
+    ],
+    [
+      228,
+      "Yak Ales"
+    ],
+    [
+      247,
+      "Woodstock"
+    ],
+    [
+      275,
+      "Vodka"
+    ],
+    [
+      278,
+      "Lindauer"
+    ],
+    [
+      280,
+      "Stoneleigh"
+    ],
+    [
+      282,
+      "SmirnoffNZ"
+    ],
+    [
+      284,
+      "Johnnie Walker"
+    ],
+    [
+      229,
+      "Corona"
+    ],
+    [
+      216,
+      "Furphy Beer"
+    ],
+    [
+      193,
+      "Briscoes"
+    ],
+    [
+      850,
+      "Delta Airlines"
+    ],
+    [
+      226,
+      "Vodka Cruiser"
+    ],
+    [
+      233,
+      "LightboxNZ"
+    ],
+    [
+      220,
+      "Pirate Life Brewing"
+    ],
+    [
+      222,
+      "Smirnoff"
+    ],
+    [
+      224,
+      "Stone & Wood Brewing"
+    ],
+    [
+      230,
+      "Asahi"
+    ],
+    [
+      237,
+      "Vodka Cruiser"
+    ],
+    [
+      1256,
+      "Mazda AU"
+    ],
+    [
+      636,
+      "BurgerFuel"
+    ],
+    [
+      638,
+      "Burger Burger"
+    ],
+    [
+      619,
+      "AS Colour"
+    ],
+    [
+      92,
+      "WhittakersNZ"
+    ],
+    [
+      111,
+      "BNZBankNZ"
+    ],
+    [
+      100,
+      "KapitiNZ"
+    ],
+    [
+      91,
+      "GenesisEnergyNZ"
+    ],
+    [
+      112,
+      "TSBBankNZ"
+    ],
+    [
+      40,
+      "MaoriNZ_party"
+    ],
+    [
+      320,
+      "Harvey Norman"
+    ],
+    [
+      322,
+      "Steinlager Pure"
+    ],
+    [
+      321,
+      "Steinlager Tokyo Dry"
+    ],
+    [
+      325,
+      "Powershop"
+    ],
+    [
+      329,
+      "VectorNZ"
+    ],
+    [
+      330,
+      "MeridanEnergyNZ"
+    ],
+    [
+      418,
+      "Westfield"
+    ],
+    [
+      340,
+      "The Base"
+    ],
+    [
+      430,
+      "Harcouts"
+    ],
+    [
+      497,
+      "SKYCITY Hamilton"
+    ],
+    [
+      1488,
+      "Matariki"
+    ],
+    [
+      1489,
+      "test2"
+    ],
+    [
+      1434,
+      "Financial Sustainability NZ"
+    ],
+    [
+      606,
+      "Mental Health"
+    ],
+    [
+      1145,
+      "Jaguar NZ"
+    ],
+    [
+      341,
+      "The Plaza"
+    ],
+    [
+      106,
+      "FonterraNZ"
+    ],
+    [
+      128,
+      "ToyotaNZ"
+    ],
+    [
+      132,
+      "AnchorNZ"
+    ],
+    [
+      1070,
+      "Bacardi"
+    ],
+    [
+      898,
+      "Tip Top Bakery"
+    ],
+    [
+      342,
+      "North City Shopping"
+    ],
+    [
+      343,
+      "Northlands Shopping"
+    ],
+    [
+      433,
+      "Remax"
+    ],
+    [
+      475,
+      "Chloe Swarbrick"
+    ],
+    [
+      473,
+      "Simon Bridges"
+    ],
+    [
+      377,
+      "Peroni"
+    ],
+    [
+      431,
+      "Ray White NZ"
+    ],
+    [
+      379,
+      "Asahi"
+    ],
+    [
+      438,
+      "Caltex"
+    ],
+    [
+      1452,
+      "Nikki Kaye"
+    ],
+    [
+      1458,
+      "NSW Police"
+    ],
+    [
+      1451,
+      "Todd Muller"
+    ],
+    [
+      1459,
+      "NZ Defence Force"
+    ],
+    [
+      1460,
+      "QDL Police"
+    ],
+    [
+      1461,
+      "Unite Against COVID-19"
+    ],
+    [
+      1462,
+      "Auckland City District  Police"
+    ],
+    [
+      1428,
+      "Say Yeah, Nah"
+    ],
+    [
+      1430,
+      "HSBC NZ"
+    ],
+    [
+      1429,
+      "SBS Bank"
+    ],
+    [
+      1431,
+      "First Credit Union"
+    ],
+    [
+      1286,
+      "Oppo"
+    ],
+    [
+      1297,
+      "Samsung New Zealand"
+    ],
+    [
+      1296,
+      "Freshn Fruity"
+    ],
+    [
+      89,
+      "TrustpowerNZ"
+    ],
+    [
+      1300,
+      "JB Hi-Fi NZ"
+    ],
+    [
+      1304,
+      "Winston Peters NZ"
+    ],
+    [
+      1307,
+      "Chloe Swarbrick NZ"
+    ],
+    [
+      1306,
+      "James Shaw NZ"
+    ],
+    [
+      1311,
+      "Mitsubishi NZ"
+    ],
+    [
+      1310,
+      "Hyundai NZ"
+    ],
+    [
+      1309,
+      "Ford NZ"
+    ],
+    [
+      1320,
+      "Samoa Tourism"
+    ],
+    [
+      1319,
+      "New Caledonia Tourism"
+    ],
+    [
+      1318,
+      "Vanuatu Tourism"
+    ],
+    [
+      1287,
+      "UoANZ"
+    ],
+    [
+      1288,
+      "WSP Opus"
+    ],
+    [
+      1299,
+      "Lenovo"
+    ],
+    [
+      1314,
+      "Honda NZ"
+    ],
+    [
+      1308,
+      "Vernon Tava NZ"
+    ],
+    [
+      1316,
+      "Cook Islands Tourism"
+    ],
+    [
+      1339,
+      "Samoa Tourism NZ"
+    ],
+    [
+      1361,
+      "Spark Sport NZ"
+    ],
+    [
+      1317,
+      "Fiji Tourism"
+    ],
+    [
+      472,
+      "Jacinda Ardern"
+    ],
+    [
+      442,
+      "Greenpeace"
+    ],
+    [
+      1221,
+      "Southern Steel"
+    ],
+    [
+      1220,
+      "White Ferns"
+    ],
+    [
+      1243,
+      "New Zealand Blood Service"
+    ],
+    [
+      1232,
+      "Harvest Snaps"
+    ],
+    [
+      1205,
+      "Audi AU"
+    ],
+    [
+      1233,
+      "The Market"
+    ],
+    [
+      1235,
+      "Augustine"
+    ],
+    [
+      1234,
+      "eBay AU"
+    ],
+    [
+      1200,
+      "Peugeot NZ"
+    ],
+    [
+      1213,
+      "SuperValue"
+    ],
+    [
+      1215,
+      "Mountain Goat Lager"
+    ],
+    [
+      1216,
+      "All Blacks"
+    ],
+    [
+      1224,
+      "The Blues"
+    ],
+    [
+      1222,
+      "Northern Mystics"
+    ],
+    [
+      1199,
+      "Volvo NZ"
+    ],
+    [
+      1204,
+      "Mercedes-Benz AU"
+    ],
+    [
+      1251,
+      "Renault AU"
+    ],
+    [
+      1214,
+      "FreshChoice"
+    ],
+    [
+      1217,
+      "Silver Ferns"
+    ],
+    [
+      1225,
+      "Wellington Saints"
+    ],
+    [
+      1223,
+      "Crusaders"
+    ],
+    [
+      1201,
+      "Volvo AU"
+    ],
+    [
+      763,
+      "Lakers"
+    ],
+    [
+      1359,
+      "Pollution NZ"
+    ],
+    [
+      1466,
+      "Lotto & COVID-19"
+    ],
+    [
+      1467,
+      "Lotto products"
+    ],
+    [
+      1422,
+      "Cathay Pacific"
+    ],
+    [
+      1421,
+      "United Airlines"
+    ],
+    [
+      846,
+      "KLM"
+    ],
+    [
+      699,
+      "JetStar Aus"
+    ],
+    [
+      697,
+      "Qantas"
+    ],
+    [
+      1260,
+      "Sustainability AU"
+    ],
+    [
+      73,
+      "UNICEFNZ"
+    ],
+    [
+      13,
+      "ANZAU"
+    ],
+    [
+      47,
+      "SpeightsNZ"
+    ],
+    [
+      1090,
+      "Watties"
+    ],
+    [
+      938,
+      "Huawei New Zealand"
+    ],
+    [
+      877,
+      "Fishpond.co.nz"
+    ],
+    [
+      9,
+      "SalvationArmyNZ"
+    ],
+    [
+      214,
+      "5 Seeds"
+    ],
+    [
+      244,
+      "Peroni"
+    ],
+    [
+      1094,
+      "Adidas"
+    ],
+    [
+      1015,
+      "LiberalParty"
+    ],
+    [
+      1044,
+      "AAMI Park"
+    ],
+    [
+      1045,
+      "Thin Lizzy"
+    ],
+    [
+      887,
+      "Skycity Auckland New"
+    ],
+    [
+      478,
+      "Andrew Little"
+    ],
+    [
+      524,
+      "ITM"
+    ],
+    [
+      948,
+      "MG Motor NZ"
+    ],
+    [
+      946,
+      "MediaWorksNZ"
+    ],
+    [
+      11,
+      "OxfamNZ"
+    ],
+    [
+      956,
+      "Metro Top Schools"
+    ],
+    [
+      30,
+      "ChildfundNZ"
+    ],
+    [
+      76,
+      "WestpacAU"
+    ],
+    [
+      43,
+      "RedCrossNZ"
+    ],
+    [
+      888,
+      "Pump"
+    ],
+    [
+      27,
+      "DbExportNZ"
+    ],
+    [
+      36,
+      "BallanceNZ"
+    ],
+    [
+      974,
+      "Kmart AU"
+    ],
+    [
+      957,
+      "Kohu Road Ice Cream"
+    ],
+    [
+      19,
+      "CommBankAU"
+    ],
+    [
+      90,
+      "VodafoneNZ"
+    ],
+    [
+      670,
+      "Canadian club"
+    ],
+    [
+      249,
+      "Mountain Goat Beer"
+    ],
+    [
+      1046,
+      "Estee Lauder"
+    ],
+    [
+      136,
+      "KiwibankNZ"
+    ],
+    [
+      141,
+      "TipTopNZ"
+    ],
+    [
+      1016,
+      "Australian Labor Party"
+    ],
+    [
+      1024,
+      "Brian Burston"
+    ],
+    [
+      1052,
+      "Domino's NZ"
+    ],
+    [
+      992,
+      "TPG Telecom"
+    ],
+    [
+      1055,
+      "The North Face - Australia & N"
+    ],
+    [
+      94,
+      "MainlandNZ"
+    ],
+    [
+      955,
+      "HAVAL NZ"
+    ],
+    [
+      889,
+      "H2GO"
+    ],
+    [
+      949,
+      "Suzuki NZ"
+    ],
+    [
+      975,
+      "MYER"
+    ],
+    [
+      958,
+      "Duck Island Ice Cream"
+    ],
+    [
+      126,
+      "NewWorldNZ"
+    ],
+    [
+      108,
+      "SkycityADENZ"
+    ],
+    [
+      133,
+      "ANZBankNZ"
+    ],
+    [
+      65,
+      "OpportunitiesNZ_party"
+    ],
+    [
+      110,
+      "McDonaldsAU"
+    ],
+    [
+      115,
+      "HeartofCityNZ"
+    ],
+    [
+      119,
+      "AirNZNZ"
+    ],
+    [
+      124,
+      "UncleTobysAU"
+    ],
+    [
+      109,
+      "OrconNZ"
+    ],
+    [
+      841,
+      "Bookabach"
+    ],
+    [
+      845,
+      "Emirates"
+    ],
+    [
+      143,
+      "SkinnyNZ"
+    ],
+    [
+      151,
+      "SpecsaversNZ"
+    ],
+    [
+      1096,
+      "Lululemon"
+    ],
+    [
+      153,
+      "CUAAU"
+    ],
+    [
+      154,
+      "WestpacNZ"
+    ],
+    [
+      147,
+      "WoolworthsAU"
+    ],
+    [
+      1017,
+      "National Party of Australia"
+    ],
+    [
+      161,
+      "FlickElectricNZ"
+    ],
+    [
+      1039,
+      "Bob Katter"
+    ],
+    [
+      1037,
+      "Scott Morrison"
+    ],
+    [
+      1026,
+      "Health Promotion Agency"
+    ],
+    [
+      1028,
+      "Sydney Cricket Ground"
+    ],
+    [
+      993,
+      "Macquarie Telcom"
+    ],
+    [
+      20,
+      "WorldVisionNZ"
+    ],
+    [
+      976,
+      "Officeworks"
+    ],
+    [
+      959,
+      "Deep South"
+    ],
+    [
+      858,
+      "IAG NZ"
+    ],
+    [
+      868,
+      "Waikato Draught"
+    ],
+    [
+      672,
+      "AA Smartfuel"
+    ],
+    [
+      483,
+      "Skytower auckland"
+    ],
+    [
+      556,
+      "Cheers"
+    ],
+    [
+      441,
+      "AA insurance"
+    ],
+    [
+      859,
+      "AMI Insurance"
+    ],
+    [
+      192,
+      "FarmersNZ"
+    ],
+    [
+      1040,
+      "Michael McCormack"
+    ],
+    [
+      1018,
+      "One Nation Party"
+    ],
+    [
+      1038,
+      "Bill Shorten"
+    ],
+    [
+      1048,
+      "L'Oreal"
+    ],
+    [
+      871,
+      "AA UK"
+    ],
+    [
+      231,
+      "Montana"
+    ],
+    [
+      879,
+      "Turners"
+    ],
+    [
+      977,
+      "Spotlight"
+    ],
+    [
+      232,
+      "NetflixNZ"
+    ],
+    [
+      890,
+      "Coca-Cola NZ"
+    ],
+    [
+      960,
+      "Appleby Farms Ice Cream"
+    ],
+    [
+      899,
+      "Vogel's"
+    ],
+    [
+      873,
+      "Actrix"
+    ],
+    [
+      995,
+      "Telstra"
+    ],
+    [
+      1030,
+      "Optus Stadium"
+    ],
+    [
+      246,
+      "Jim Beam"
+    ],
+    [
+      218,
+      "James Squire"
+    ],
+    [
+      1019,
+      "Centre Alliance"
+    ],
+    [
+      1049,
+      "Revlon"
+    ],
+    [
+      922,
+      "Canterbury Rugby"
+    ],
+    [
+      952,
+      "ŠKODA NZ"
+    ],
+    [
+      978,
+      "Supercheap Auto"
+    ],
+    [
+      961,
+      "IGA AU"
+    ],
+    [
+      685,
+      "PGG Wrightson"
+    ],
+    [
+      520,
+      "Optus"
+    ],
+    [
+      555,
+      "40 hour Famine"
+    ],
+    [
+      495,
+      "Skycity hotel Auckland"
+    ],
+    [
+      498,
+      "Skycity Queenstown"
+    ],
+    [
+      482,
+      "Skycity Live"
+    ],
+    [
+      310,
+      "Coles"
+    ],
+    [
+      317,
+      "Rebel Sport"
+    ],
+    [
+      266,
+      "Brown Brothers Winery"
+    ],
+    [
+      267,
+      "Jacob's Creek"
+    ],
+    [
+      319,
+      "Smiths City"
+    ],
+    [
+      268,
+      "Yealands Family Wines"
+    ],
+    [
+      269,
+      "Villa Maria Estate"
+    ],
+    [
+      276,
+      "Rum"
+    ],
+    [
+      277,
+      "Brancott Estate"
+    ],
+    [
+      279,
+      "Wither Hills"
+    ],
+    [
+      281,
+      "Absolut"
+    ],
+    [
+      283,
+      "Coruba"
+    ],
+    [
+      95,
+      "SkyCityAKLNZ"
+    ],
+    [
+      123,
+      "SlingshotNZ"
+    ],
+    [
+      715,
+      "Jami-Lee Ross"
+    ],
+    [
+      996,
+      "Vodafone AU"
+    ],
+    [
+      1042,
+      "Richard Di Natale"
+    ],
+    [
+      479,
+      "Winston Peters"
+    ],
+    [
+      264,
+      "The Co-operative Bank NZ"
+    ],
+    [
+      1020,
+      "The Australian Greens"
+    ],
+    [
+      1031,
+      "Melbourne Cricket Ground"
+    ],
+    [
+      1050,
+      "Nude by Nature"
+    ],
+    [
+      1059,
+      "Icebreaker"
+    ],
+    [
+      979,
+      "Target"
+    ],
+    [
+      508,
+      "TAB NZ"
+    ],
+    [
+      962,
+      "ALDI"
+    ],
+    [
+      872,
+      "TVNZ"
+    ],
+    [
+      474,
+      "James Shaw"
+    ],
+    [
+      318,
+      "Noel Leeming"
+    ],
+    [
+      337,
+      "Lynnmall"
+    ],
+    [
+      344,
+      "Westfield Auckland"
+    ],
+    [
+      336,
+      "Sylvia Park"
+    ],
+    [
+      361,
+      "Bags Not"
+    ],
+    [
+      1271,
+      "URBNSURF"
+    ],
+    [
+      1111,
+      "Starburst"
+    ],
+    [
+      1119,
+      "NZI"
+    ],
+    [
+      480,
+      "Paula Bennett"
+    ],
+    [
+      1021,
+      "KattersAustralianParty"
+    ],
+    [
+      1404,
+      "Air New Zealand"
+    ],
+    [
+      1043,
+      "Clive Palmer"
+    ],
+    [
+      997,
+      "AMP AU"
+    ],
+    [
+      1032,
+      "Marvel Stadium"
+    ],
+    [
+      1060,
+      "Mountain Designs"
+    ],
+    [
+      980,
+      "The Good Guys"
+    ],
+    [
+      35,
+      "SteinlagerNZ"
+    ],
+    [
+      963,
+      "BI-LO SuperSaver"
+    ],
+    [
+      554,
+      "KidsCanNZ"
+    ],
+    [
+      350,
+      "LightboxNZ"
+    ],
+    [
+      434,
+      "Bayleys"
+    ],
+    [
+      1144,
+      "Land Rover NZ"
+    ],
+    [
+      496,
+      "Skycity Grand Hotel"
+    ],
+    [
+      1033,
+      "The Gabba"
+    ],
+    [
+      998,
+      "Bank of Queensland"
+    ],
+    [
+      1061,
+      "Paddy Pallin"
+    ],
+    [
+      526,
+      "The Toolshed"
+    ],
+    [
+      964,
+      "Foodland"
+    ],
+    [
+      981,
+      "Toys\"R\"Us Australia"
+    ],
+    [
+      437,
+      "Trade me property"
+    ],
+    [
+      53,
+      "ACTNZ_party"
+    ],
+    [
+      504,
+      "SKYCITY Darwin"
+    ],
+    [
+      1113,
+      "Haribo AU"
+    ],
+    [
+      41,
+      "NationalNZ_party"
+    ],
+    [
+      37,
+      "Heineken"
+    ],
+    [
+      32,
+      "LewisRoadNZ"
+    ],
+    [
+      1062,
+      "Decathlon Australia"
+    ],
+    [
+      1034,
+      "Bankwest Stadium"
+    ],
+    [
+      999,
+      "Bankwest"
+    ],
+    [
+      982,
+      "Red Energy"
+    ],
+    [
+      1075,
+      "Ben and Jerry's NZ"
+    ],
+    [
+      965,
+      "BIG W"
+    ],
+    [
+      485,
+      "The Sugar Club"
+    ],
+    [
+      489,
+      "Federal Delicatessen"
+    ],
+    [
+      544,
+      "Countdown"
+    ],
+    [
+      529,
+      "Ethique NZ"
+    ],
+    [
+      432,
+      "Mike Pero real estate"
+    ],
+    [
+      439,
+      "mobil"
+    ],
+    [
+      476,
+      "Judith Collins"
+    ],
+    [
+      471,
+      "David Seymour"
+    ],
+    [
+      335,
+      "Kiwi Property Group"
+    ],
+    [
+      50,
+      "LabourNZ_party"
+    ],
+    [
+      1146,
+      "Volvo NZ"
+    ],
+    [
+      736,
+      "Helloworld"
+    ],
+    [
+      735,
+      "Flight Centre"
+    ],
+    [
+      120,
+      "2degreesNZ"
+    ],
+    [
+      118,
+      "ZEnergyNZ"
+    ],
+    [
+      527,
+      "Palmers"
+    ],
+    [
+      1114,
+      "PamsNZ"
+    ],
+    [
+      1088,
+      "Eta"
+    ],
+    [
+      1079,
+      "Coopers"
+    ],
+    [
+      1080,
+      "James Boag"
+    ],
+    [
+      1035,
+      "ANZ Stadium"
+    ],
+    [
+      157,
+      "SparkNZ"
+    ],
+    [
+      1000,
+      "Bendigo Bank"
+    ],
+    [
+      983,
+      "Diamond Energy"
+    ],
+    [
+      1063,
+      "BCF - Boating, Camping, Fishin"
+    ],
+    [
+      1071,
+      "Wild Turkey NZ"
+    ],
+    [
+      1076,
+      "Killinchy Gold"
+    ],
+    [
+      966,
+      "Chemist Warehouse"
+    ],
+    [
+      545,
+      "PAK'nSAVE"
+    ],
+    [
+      553,
+      "2degreesNZ"
+    ],
+    [
+      546,
+      "RealEstate.co.nz"
+    ],
+    [
+      551,
+      "Save the Children NZ"
+    ],
+    [
+      549,
+      "Voices of Hope"
+    ],
+    [
+      550,
+      "Save the Children UK"
+    ],
+    [
+      552,
+      "CureKids"
+    ],
+    [
+      456,
+      "Flipnz"
+    ],
+    [
+      660,
+      "Skycity Casino"
+    ],
+    [
+      623,
+      "LewisRoadNZ"
+    ],
+    [
+      622,
+      "Little Island"
+    ],
+    [
+      1241,
+      "Kogan"
+    ],
+    [
+      1147,
+      "BMW NZ"
+    ],
+    [
+      1091,
+      "Cadbury NZ"
+    ],
+    [
+      1081,
+      "Hahn"
+    ],
+    [
+      984,
+      "Powershop AU"
+    ],
+    [
+      967,
+      "Cotton On AU"
+    ],
+    [
+      635,
+      "Ecostore"
+    ],
+    [
+      686,
+      "Farmlands NZ"
+    ],
+    [
+      580,
+      "Tasti"
+    ],
+    [
+      579,
+      "AA Automotive"
+    ],
+    [
+      582,
+      "TradeMe"
+    ],
+    [
+      583,
+      "My Food Bag"
+    ],
+    [
+      312,
+      "Flybuys AU"
+    ],
+    [
+      1082,
+      "Carlton Dry"
+    ],
+    [
+      1036,
+      "Allianz Stadium"
+    ],
+    [
+      881,
+      "LifeDirect"
+    ],
+    [
+      968,
+      "Dan Murphy's"
+    ],
+    [
+      766,
+      "Lion Red"
+    ],
+    [
+      819,
+      "Auckland Rugby"
+    ],
+    [
+      821,
+      "Auckland Rugby"
+    ],
+    [
+      618,
+      "Citta Design"
+    ],
+    [
+      659,
+      "Lotto"
+    ],
+    [
+      629,
+      "Eat My Lunch"
+    ],
+    [
+      612,
+      "KFC NZ"
+    ],
+    [
+      1,
+      "ASBBankNZ"
+    ],
+    [
+      54,
+      "NZFirstNZ_party"
+    ],
+    [
+      1089,
+      "Griffin'sNZ"
+    ],
+    [
+      1083,
+      "Carlton Draught"
+    ],
+    [
+      1073,
+      "Bombay Sapphire NZ"
+    ],
+    [
+      847,
+      "American Airlines"
+    ],
+    [
+      1074,
+      "Gordon's NZ"
+    ],
+    [
+      820,
+      "EECA"
+    ],
+    [
+      822,
+      "Chorus"
+    ],
+    [
+      689,
+      "Tourism New Zealand"
+    ],
+    [
+      737,
+      "House of Travel"
+    ],
+    [
+      455,
+      "MercuryEnergyNZ"
+    ],
+    [
+      862,
+      "Tower Insurance"
+    ],
+    [
+      848,
+      "Hawaiian Airlines"
+    ],
+    [
+      1001,
+      "Macquarie Bank"
+    ],
+    [
+      986,
+      "AGL"
+    ],
+    [
+      669,
+      "Vodka o"
+    ],
+    [
+      987,
+      "Origin Energy"
+    ],
+    [
+      1072,
+      "Jose Cuervo"
+    ],
+    [
+      751,
+      "Travel"
+    ],
+    [
+      969,
+      "David Jones"
+    ],
+    [
+      746,
+      "STA Travel NZ"
+    ],
+    [
+      882,
+      "Trade me property"
+    ],
+    [
+      676,
+      "Four Square Supermarkets"
+    ],
+    [
+      970,
+      "EB Games AU"
+    ],
+    [
+      923,
+      "Wellington Rugby"
+    ],
+    [
+      934,
+      "NZ Police"
+    ],
+    [
+      681,
+      "NZTA"
+    ],
+    [
+      755,
+      "Seek NZ"
+    ],
+    [
+      690,
+      "JUCY"
+    ],
+    [
+      98,
+      "MercuryEnergyNZ"
+    ],
+    [
+      1085,
+      "Young Henrys"
+    ],
+    [
+      1298,
+      "GoPro"
+    ],
+    [
+      866,
+      "Beer The Beautiful Truth"
+    ],
+    [
+      870,
+      "NZ House & Garden magazine"
+    ],
+    [
+      867,
+      "Little Creatures"
+    ],
+    [
+      861,
+      "Youi"
+    ],
+    [
+      742,
+      "GEM Visa NZ"
+    ],
+    [
+      1312,
+      "Nissan NZ"
+    ],
+    [
+      1203,
+      "BMW AU"
+    ],
+    [
+      1268,
+      "Taco Bell NZ"
+    ],
+    [
+      988,
+      "Click Energy"
+    ],
+    [
+      874,
+      "Bigpipe"
+    ],
+    [
+      951,
+      "Volkswagen NZ"
+    ],
+    [
+      883,
+      "TradeMe Motors"
+    ],
+    [
+      891,
+      "Pepsi NZ"
+    ],
+    [
+      897,
+      "Auckland Arts Festival"
+    ],
+    [
+      904,
+      "Xero"
+    ],
+    [
+      971,
+      "Harvey Norman AU"
+    ],
+    [
+      837,
+      "Laybuy"
+    ],
+    [
+      838,
+      "AA Finance"
+    ],
+    [
+      1313,
+      "Mazda NZ"
+    ],
+    [
+      1254,
+      "Citroen AU"
+    ],
+    [
+      989,
+      "Alinta Energy"
+    ],
+    [
+      849,
+      "Air Canada"
+    ],
+    [
+      875,
+      "Warehouse Mobile"
+    ],
+    [
+      915,
+      "Life Insurance"
+    ],
+    [
+      917,
+      "Trade Me Property"
+    ],
+    [
+      852,
+      "Estrella Damm"
+    ],
+    [
+      919,
+      "Student Job Search"
+    ],
+    [
+      920,
+      "The Blues"
+    ],
+    [
+      853,
+      "MonteithsNZ"
+    ],
+    [
+      671,
+      "Fly Buys NZ"
+    ],
+    [
+      924,
+      "Karma Cola"
+    ],
+    [
+      926,
+      "Charlie's Drinks"
+    ],
+    [
+      935,
+      "St John"
+    ],
+    [
+      937,
+      "Te Papa"
+    ],
+    [
+      972,
+      "IKEA au"
+    ],
+    [
+      1064,
+      "Rays"
+    ],
+    [
+      990,
+      "Simple Energy"
+    ],
+    [
+      884,
+      "Trade Me Jobs"
+    ],
+    [
+      876,
+      "Pizza Hut NZ"
+    ],
+    [
+      1206,
+      "Lexus AU"
+    ],
+    [
+      1255,
+      "Subaru AU"
+    ],
+    [
+      1218,
+      "Black Ferns"
+    ],
+    [
+      1252,
+      "Peugeot AU"
+    ],
+    [
+      1269,
+      "Sustainable New Zealand Party"
+    ],
+    [
+      1185,
+      "Climate change NZ"
+    ],
+    [
+      869,
+      "M2 Magazine New Zealand"
+    ],
+    [
+      1226,
+      "Vantage Black Sticks"
+    ],
+    [
+      863,
+      "NEON NZ"
+    ],
+    [
+      1240,
+      "CentrelinkAU"
+    ],
+    [
+      907,
+      "Samsung"
+    ],
+    [
+      921,
+      "The Blues"
+    ],
+    [
+      929,
+      "Antipodes"
+    ],
+    [
+      857,
+      "Farro Fresh"
+    ],
+    [
+      927,
+      "Phoenix Organics"
+    ],
+    [
+      854,
+      "Barfoot & Thompson Brands"
+    ],
+    [
+      925,
+      "Bundaberg Ginger Beer"
+    ],
+    [
+      191,
+      "KmartNZ"
+    ],
+    [
+      77,
+      "GreenNZ_party"
+    ],
+    [
+      932,
+      "Auckland Transport"
+    ],
+    [
+      936,
+      "Starship"
+    ],
+    [
+      346,
+      "Barfoot thompson"
+    ],
+    [
+      1360,
+      "5G"
+    ],
+    [
+      1302,
+      "Simon Bridges NZ"
+    ],
+    [
+      1303,
+      "Jacinda Ardern NZ"
+    ],
+    [
+      1305,
+      "David Seymour NZ"
+    ],
+    [
+      1315,
+      "Kia Motors NZ"
+    ],
+    [
+      1009,
+      "Spark Sport"
+    ],
+    [
+      1274,
+      "Climate change/Sustainability"
+    ],
+    [
+      105,
+      "WarehouseNZ"
+    ],
+    [
+      931,
+      "Ministry of Social Development"
+    ],
+    [
+      643,
+      "Fast food"
+    ],
+    [
+      1464,
+      "Black Lives Matter"
+    ],
+    [
+      1465,
+      "Warehouse Stationery"
+    ],
+    [
+      1476,
+      "Stuff"
+    ],
+    [
+      1477,
+      "NZ Post"
+    ],
+    [
+      1485,
+      "Climate Awareness"
+    ],
+    [
+      1408,
+      "COVID-19 general"
+    ],
+    [
+      1363,
+      "COVID-19 AU"
+    ],
+    [
+      1362,
+      "COVID-19 NZ"
+    ],
+    [
+      1487,
+      "COVID-19 Travel NZ"
+    ]
+  ],
+  "my_tags": [
+    [
+      1486,
+      "My Test Topic 1"
+    ]
+  ]
+}

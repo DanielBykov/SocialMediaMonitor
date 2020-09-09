@@ -67,17 +67,27 @@ export const getTopContentForBubbleWidget = (props) => {
 }
 
 export const searchByZavyTags = (value) => {
-  const url = '/api/v5/'
+  const url = 'local-data/tags.json'
   //'/api/v5/?appName=zavy_monitor&searchTags=Mentions&dev_company_id=16'
   return axios.get(url, {
     params: {
-      ...paramsAppName(),
-      searchTags: value
+      // ...paramsAppName(),
+      // searchTags: value
     }
   })
-    .then(result=>{
-      const {data: {appData:{tags=[], my_tags=[]}}} = result
-      return {tags, my_tags}
+    .then(result => new Promise( resolve => setTimeout( ()=>resolve(result),750 ) ))
+    .then(result => {
+      // console.log('result: ',result)
+      let {data: {tags=[], my_tags=[]}} = result
+      tags = tags.filter(el => {
+        console.log('el.indexOf(value): ',el.indexOf(value))
+        return el[1].indexOf(value) !== -1
+      })
+      // console.log('search: ',search)
+      let r = {tags, my_tags}
+      // let r = {search, my_tags}
+      console.log('r: ',r)
+      return r
     })
 }
 
