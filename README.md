@@ -8,6 +8,7 @@
 
 ### Installation
 ```sh
-$ npm install -d
+$ cd SocialMediaMonitor
+$ npm install
 $ npm run local-server
 ```
