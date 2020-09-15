@@ -77,17 +77,11 @@ export const searchByZavyTags = (value) => {
   })
     .then(result => new Promise( resolve => setTimeout( ()=>resolve(result),750 ) ))
     .then(result => {
-      // console.log('result: ',result)
       let {data: {tags=[], my_tags=[]}} = result
       tags = tags.filter(el => {
-        console.log('el.indexOf(value): ',el.indexOf(value))
         return el[1].indexOf(value) !== -1
       })
-      // console.log('search: ',search)
-      let r = {tags, my_tags}
-      // let r = {search, my_tags}
-      console.log('r: ',r)
-      return r
+      return {tags, my_tags}
     })
 }
 
