@@ -1,10 +1,10 @@
 import React, {Component} from "react"
 import HighchartsReact from 'highcharts-react-official'
 import Highcharts from 'highcharts'
-import vars from '../../vars'
-import {LoadingLine} from '../../components/loadingAnimation'
+import vars from '../../../vars'
+import {LoadingLine} from '../../loadingAnimation'
 import {withGlobalState} from 'react-globally'
-import {varsDiffAny} from '../../components/tools'
+import {varsDiffAny} from '../../tools'
 
 
 class BubbleChart extends Component {

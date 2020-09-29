@@ -4,16 +4,16 @@ import {DateRange} from './components/DateRange/DateRange'
 import {RadioFilter} from './components/FiltersBar/RadioFilter'
 import {FiltersBarWrap} from './components/FiltersBar/FiltersBarWrap'
 import Search from './components/SearchBar/Search'
-import {ChartSectionWrap} from './MainBody/ChartsSection/ChartSectionWrap'
-import {MainBodyWrap} from './MainBody/MainBodyWrap'
-import {Sidebar} from './MainBody/Sidebar/Sidebar'
-import LineChart from './MainBody/ChartsSection/LineChart'
-import BubbleChart from './MainBody/ChartsSection/bubbleChart'
-import {ChartFilterBar, ContentFilterBar} from './MainBody/ChartsSection/ChartFilterBar'
-import TopContent from './MainBody/Sidebar/TopContent'
-import {WidgetBox} from './MainBody/ChartsSection/Widgets/WidgetBox'
-import {StatsWidget} from './MainBody/ChartsSection/Widgets/StatsWidget'
-import {OnePointWidget__Bubble, OnePointWidget__Line} from './MainBody/ChartsSection/Widgets/OnePointWidget'
+import {ChartSectionWrap} from './components/MainBody/ChartsSection/ChartSectionWrap'
+import {MainBodyWrap} from './components/MainBody/MainBodyWrap'
+import {Sidebar} from './components/MainBody/Sidebar/Sidebar'
+import LineChart from './components/MainBody/ChartsSection/LineChart'
+import BubbleChart from './components/MainBody/ChartsSection/bubbleChart'
+import {ChartFilterBar, ContentFilterBar} from './components/MainBody/ChartsSection/ChartFilterBar'
+import TopContent from './components/MainBody/Sidebar/TopContent'
+import {WidgetBox} from './components/MainBody/ChartsSection/Widgets/WidgetBox'
+import {StatsWidget} from './components/MainBody/ChartsSection/Widgets/StatsWidget'
+import {OnePointWidget__Bubble, OnePointWidget__Line} from './components/MainBody/ChartsSection/Widgets/OnePointWidget'
 
 import { Provider, withGlobalState } from 'react-globally'
 import {AllIco, BlogsIco, FbIco, NewsIco} from './style/Icons'
@@ -165,18 +165,11 @@ class AppMonitor extends Component {
     )
   }
 
-  zavyApiRequestTopContent(contentType){
-    getTopContentData({
-      contentType,
-      props: this.props,
-    })
-  }
-
   apiAllRequest(){
 
     getBubbleChartApiData(this.props)
     getLineChartApiData(this.props)
-    this.zavyApiRequestTopContent(vars.topContent)
+    getTopContentData(this.props)
   }
 
   componentDidMount() {

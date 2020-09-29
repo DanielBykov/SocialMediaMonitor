@@ -1,4 +1,4 @@
-import {EmoIco__Joy, EmoIcons, EmoIconsD256, LikeIcon} from '../../../style/Icons'
+import {EmoIco__Joy, EmoIcons, EmoIconsD256, LikeIcon} from '../../../../style/Icons'
 import React from 'react'
 
 export const EmotionsBox = ({

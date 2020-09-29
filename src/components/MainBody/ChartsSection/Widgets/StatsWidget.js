@@ -1,6 +1,6 @@
 import React from 'react'
 import { withGlobalState } from 'react-globally'
-import vars from '../../../vars'
+import vars from '../../../../vars'
 
 export const StatsWidget = withGlobalState((props) => {
   const {
@@ -20,7 +20,7 @@ export const StatsWidget = withGlobalState((props) => {
         totalArticles: prev.totalArticles + Number(curr.number_articles),
         totalMentions: prev.totalMentions + Number(curr.mentions),
         totalSentiment: prev.totalSentiment + Number(Number(curr.sentiment * 100).toFixed(0))
-      } 
+      }
     }, {totalArticles: 0, totalMentions: 0, totalSentiment: 0});
     netSentiment = totalStat.totalSentiment/lineChart.length
     showData = true;

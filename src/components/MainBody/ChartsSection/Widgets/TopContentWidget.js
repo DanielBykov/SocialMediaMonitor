@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react'
-import {LoadingLine} from '../../../components/loadingAnimation'
+import {LoadingLine} from '../../../loadingAnimation'
 import {withGlobalState} from 'react-globally'
-import {CommentsIcon, LinkExternal} from '../../../style/Icons'
+import {CommentsIcon, LinkExternal} from '../../../../style/Icons'
 import {EmotionsBox} from './EmotionsBox'
-import {abbrNum} from '../../../components/tools'
+import {abbrNum} from '../../../tools'
 
 export const TopContentWidget = withGlobalState((props) => {
 

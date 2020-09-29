@@ -3,9 +3,9 @@ import HighchartsReact from 'highcharts-react-official'
 import Highcharts from 'highcharts'
 import {withGlobalState} from 'react-globally'
 import moment from 'moment'
-import vars from '../../vars'
-import {LoadingLine} from '../../components/loadingAnimation'
-import {varsDiffAny, varDiff} from '../../components/tools'
+import vars from '../../../vars'
+import {LoadingLine} from '../../loadingAnimation'
+import {varsDiffAny, varDiff} from '../../tools'
 
 export const apiDataToSeriesProcessing__LineChart = (data, globalState) => {
   let d = data

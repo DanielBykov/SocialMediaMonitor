@@ -7,7 +7,7 @@ import React, {
 import {SearchBarWrap} from './SearchBarWrap'
 import Select, {components} from 'react-select'
 import AsyncCreatableSelect from 'react-select/async-creatable'
-import RadioFilter from '../FiltersBar/RadioFilter'
+// import RadioFilter from '../FiltersBar/RadioFilter'
 import {CloseCrossIco, HamburgerIco, MagnifyGlassIco, TopicStarIco} from '../../style/Icons'
 import {searchByZavyTags} from '../../zavyApi'
 import { withGlobalState } from 'react-globally'

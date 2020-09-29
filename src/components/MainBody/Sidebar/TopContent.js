@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import moment from 'moment'
 import {withGlobalState} from 'react-globally'
-import {CommentsIcon, EmoIcons, LikeIcon, SharesIcon} from '../../style/Icons.js'
-import vars from '../../vars'
-import {LoadingLine} from '../../components/loadingAnimation'
+import {CommentsIcon, EmoIcons, LikeIcon, SharesIcon} from '../../../style/Icons.js'
+import vars from '../../../vars'
+import {LoadingLine} from '../../loadingAnimation'
 import {EmotionsBox} from '../ChartsSection/Widgets/EmotionsBox'
 
 class TopContent extends Component {

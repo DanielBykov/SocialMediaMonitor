@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import {EmotionsBox} from './EmotionsBox'
 import { withGlobalState } from 'react-globally'
-import vars from '../../../vars'
-import {abbrNum} from '../../../components/tools'
+import vars from '../../../../vars'
+import {abbrNum} from '../../../tools'
 import {TopContentWidget} from './TopContentWidget'
-import {CloseCrossIco} from '../../../style/Icons'
-import {getTopContentForBubbleWidget, getTopContentForLineWidget} from '../../../zavyApi'
+import {CloseCrossIco} from '../../../../style/Icons'
+import {getTopContentForBubbleWidget, getTopContentForLineWidget} from '../../../../zavyApi'
 import moment from 'moment'
 
 export const OnePointWidget__Line = withGlobalState((props) => {

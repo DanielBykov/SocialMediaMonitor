@@ -1,7 +1,7 @@
 import axios from 'axios'
 import moment from 'moment'
 import vars from './vars'
-import {apiDataToSeriesProcessing__LineChart} from './MainBody/ChartsSection/LineChart'
+import {apiDataToSeriesProcessing__LineChart} from './components/MainBody/ChartsSection/LineChart'
 
 export const getTopContentForLineWidget = (props) => {
   let {data: {
@@ -68,98 +68,72 @@ export const getTopContentForBubbleWidget = (props) => {
 
 export const searchByZavyTags = (value) => {
   const url = 'local-data/tags.json'
-  //'/api/v5/?appName=zavy_monitor&searchTags=Mentions&dev_company_id=16'
   return axios.get(url, {
     params: {
       // ...paramsAppName(),
-      // searchTags: value
     }
   })
     .then(result => new Promise( resolve => setTimeout( ()=>resolve(result),750 ) ))
     .then(result => {
-      // console.log('result: ',result)
       let {data: {tags=[], my_tags=[]}} = result
       tags = tags.filter(el => {
-        console.log('el.indexOf(value): ',el.indexOf(value))
         return el[1].indexOf(value) !== -1
       })
-      // console.log('search: ',search)
-      let r = {tags, my_tags}
-      // let r = {search, my_tags}
-      console.log('r: ',r)
-      return r
+      return {tags, my_tags}
     })
 }
 
 export const getBubbleChartApiData = (props) => {
-  const chartType = vars.bubbleChart
-  const {globalState:gs, setGlobalState: setGS} = props
-
-  // Local Demo Data
-  // setGS({[chartType]: vars.bubbleDemoData})
-
-  zavyAPIRequest({
-    apiURL : vars.api__url + 'bubblechart/',
-    apiParams: {
-      ...paramsAllFilters(props),
-    },
-    callBack__Before: ()=>{
-      setGS({[vars.api__loading__pfx+chartType]: true})
-    },
-    callBack__Success: (resp) => {
-      setGS({[vars.api__loading__pfx+chartType]: false})
-      setGS({[chartType]: resp.data})
-      //props.setGlobalState({[chartType]: resp.data.appData.json})
-      // callBack__Success()
-    },
-    callBack__Error: err => {
-      setGS({[vars.api__loading__pfx+chartType]: false})
-      console.error('ZAVY: ', err)
+  const url = 'local-data/bubblechart.json'
+  props.setGlobalState({[vars.api__loading__pfx+vars.bubbleChart]: true})
+  axios.get(url, {
+    params: {
+      // ...paramsAppName(),
     }
   })
+    .then(result => new Promise( resolve => setTimeout( ()=>resolve(result),750 ) ))
+    .then(result => {
+      console.log('res: ',result)
+      props.setGlobalState({
+        [vars.api__loading__pfx+vars.bubbleChart]: false,
+        [vars.bubbleChart]: result.data.app_data,
+      })
+    })
 
 }
 
 export const getLineChartApiData = (props) => {
-  zavyAPIRequest({
-    apiURL : vars.api__url + 'linechart/',
-    apiParams: {
-      ...paramsAllFilters(props),
-      period: props.globalState[vars.filter__Period]
-    },
-    callBack__Before: ()=>{
-      props.setGlobalState({[vars.api__loading__pfx+vars.lineChart]: true})
-    },
-    callBack__Success: ({data}) => {
+  const url = 'local-data/linechart.json'
+  props.setGlobalState({[vars.api__loading__pfx+vars.lineChart]: true})
+  axios.get(url, {
+    params: {
+      // ...paramsAppName(),
+    }
+  })
+    .then(result => new Promise( resolve => setTimeout( ()=>resolve(result),750 ) ))
+    .then(result => {
+      console.log('res: ',result)
       props.setGlobalState({
         [vars.api__loading__pfx+vars.lineChart]: false,
-        [vars.lineChart]: data,
-        [vars.lineChartSeries]: apiDataToSeriesProcessing__LineChart(data, props.globalState)
+        [vars.lineChart]: result.data.app_data,
+        [vars.lineChartSeries]: apiDataToSeriesProcessing__LineChart(result.data.app_data, props.globalState)
       })
-    }
-  })
+    })
 }
 
-export const getTopContentData = ({
-  contentType, props, callBack__Before, callBack__Success
-}) => {
-  zavyAPIRequest({
-    apiURL : vars.api__url + 'topcontent/',
-    apiParams: {
-      ...paramsContentDate(props.globalState),
-      ...paramsContentFilters(props.globalState),
-      contentType,
-    },
-    callBack__Before: ()=>{
-      props.setGlobalState({[vars.api__loading__pfx+contentType]: true})
-    },
-    callBack__Success: (resp) => {
-      props.setGlobalState({[vars.api__loading__pfx+contentType]: false})
-      props.setGlobalState({[contentType]: resp.data})
-      //props.setGlobalState({[contentType]: resp.data.appData.json})
-      callBack__Success()
+export const getTopContentData = (props) => {
+  const url = 'local-data/top-posts.json'
+  props.setGlobalState({[vars.api__loading__pfx+vars.topContent]: true})
+  axios.get(url, {
+    params: {
+      // ...paramsAppName(),
     }
   })
+    .then(result => new Promise( resolve => setTimeout( ()=>resolve(result),750 ) ))
+    .then(result => {
+      props.setGlobalState({[vars.api__loading__pfx+vars.topContent]: false})
+      props.setGlobalState({[vars.topContent]: result.data.app_data})
+    })
 }
 
 const paramsAppNameDate = (getState) => {
@@ -225,68 +199,3 @@ const paramsContentFilters = (getState) => {
   }
 }
 
-export const zavyAPIRequest = (
-  {
-    apiURL = window.apiURL,
-    apiParams = paramsAppNameDate(),
-    callBack__Before = ()=>({}),
-    callBack__Success = (resp)=>({}),
-    callBack__ZavyError = (resp)=>({}),
-    callBack__Error = (err)=>({}),
-    getState,
-    setState,
-  }
-) => {
-  callBack__Before()
-
-  // Request
-  axios.get(apiURL, {
-    params: apiParams
-  })
-    .then((resp) => {
-
-      // Success Request
-      // State
-      callBack__Success(resp)
-      // this.setGS(
-      //   {
-      //     ...newStateCallBack(resp),
-      //     apiLastUrl: resp.request.responseURL,
-      //     apiAttempt: 1,
-      //     apiLoading: false
-      //   }
-      // )
-
-      // Zavy Returns Errors
-      // Send error messages to the console
-      // const errors = (resp.data.errors || [])
-      // if(errors.length){
-      //   errors.forEach((e,i)=>{
-      //     console.error(`Data error (#${i+1})`, e)
-      //   })
-      // }
-
-    })
-
-    // Bad Request to Zavy
-    .catch((err) => {
-      callBack__Error(err)
-
-      // console.log('API-Error-Response: ', err.response)
-      // const extraState = errorStateCallBack(err)
-      // const status = err.response.status
-      // const timeout = (new Date() - err.response.config.timeStartD256) / 1000
-      //
-      // this.setGS({
-      //   flagApiError: true,
-      //   apiErrorResponseData: {
-      //     // flagLongApiRequest: (status===502 && timeout > 25),
-      //     // flagLongApiRequest: status===500, // DEV
-      //     status: err.response.status,
-      //     timeout: (new Date() - err.response.config.timeStartD256) / 1000
-      //   },
-      //   apiLoading: false,
-      //   ...extraState
-      // })
-    })
-}
